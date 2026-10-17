@@ -1,0 +1,10 @@
+﻿{
+  "name": "dompilot",
+  "version": "0.1.0",
+  "description": "Minimal browser automation extension with local PII redaction.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --check src/background.js && node --check src/loop.js && node --check src/offscreen.js && node --check src/bridge.js && node --check src/capture.js && node --check src/content.js && node --check src/dom-serializer.js && node --check src/executor.js && node --check src/local-values.js && node --check src/ocr.js && node --check src/router.js && node --check src/pii/detector.js && node --check src/pii/anonymizer.js && node --check src/pii/validators.js && node --check src/pii/regex-patterns.js"
+  }
+}

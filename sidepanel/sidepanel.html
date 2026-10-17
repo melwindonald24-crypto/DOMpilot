@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOMpilot</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <h1>DOMpilot</h1>
+      <label for="goal">Task goal</label>
+      <textarea id="goal" rows="4">Fill the active form</textarea>
+      <div class="actions">
+        <button id="startTask">Start</button>
+        <button id="stopTask" class="secondary">Stop</button>
+      </div>
+      <div id="status" class="status">Idle</div>
+    </main>
+    <script type="module" src="sidepanel.js"></script>
+  </body>
+</html>
