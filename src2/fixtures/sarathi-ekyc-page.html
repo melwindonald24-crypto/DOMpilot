@@ -1,0 +1,3653 @@
+﻿<html><head>
+
+
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<!-- noindex	Do not show this page in search results and do not show a "Cached" link in search results.
+	 nofollow	Do not follow the links on this page
+	 none		Equivalent to noindex, nofollow -->
+<meta name="ROBOTS" content="NONE">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>eKYC Form</title>
+
+<link rel="Shortcut Icon" type="image/ico" href="https://sarathi.parivahan.gov.in/cdn-sarathi/images/nhai.ico?v=1.0">
+
+<link href="https://sarathi.parivahan.gov.in/cdn-sarathi/css/bootstrap/bootstrap-theme.min.css?v=1.0" type="text/css" rel="stylesheet">
+<link href="https://sarathi.parivahan.gov.in/cdn-sarathi/css/bootstrap/bootstrap.min.css?v=1.0" type="text/css" rel="stylesheet">
+<link href="https://sarathi.parivahan.gov.in/cdn-sarathi/css/jquery/jquery-ui.min.css?v=1.0" rel="stylesheet" type="text/css">
+<link href="https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/custom.css?v=1.0" type="text/css" rel="stylesheet">
+<link href="https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/sarathi_parivahan.css?v=1.0" rel="stylesheet" type="text/css">
+<link href="https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/sarathi_parivahan_layout.css?v=1.0" type="text/css" rel="stylesheet">
+<link href="https://sarathi.parivahan.gov.in/cdn-sarathi/css/sarathi/sow4.css?v=1.0" type="text/css" rel="stylesheet">
+<link href="https://sarathi.parivahan.gov.in/cdn-sarathi/css/fonts/font-awesome.min.css?v=1.0" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="https://sarathi.parivahan.gov.in/cdn-sarathi/js/jquery/jquery.min.js?v=1.0"></script>
+<script type="text/javascript" src="https://sarathi.parivahan.gov.in/cdn-sarathi/js/jquery/jquery-ui.min.js?v=1.0"></script>
+<script type="text/javascript" src="https://sarathi.parivahan.gov.in/cdn-sarathi/js/bootstrap/bootstrap.min.js?v=1.0"></script>
+
+<script type="text/javascript" src="https://sarathi.parivahan.gov.in/cdn-sarathi/js/modal.js?v=1.0"></script>
+
+
+<script>
+function loadScript(src, callback) {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = src;
+  script.id = "scripts";
+  script.onload = callback;
+  document.head.appendChild(script);
+  $('#scripts').remove();
+}
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof jQuery === "undefined") {
+	console.log("jQuery is not defined");
+    loadScript("./js/scripts.js?v=0.1", function () {
+    	console.log("jQuery defined.");
+    });
+  } else {
+    console.log("jQuery already loaded--" + jQuery.fn.jquery);
+    $(function () {
+    	console.log("jQuery ready");
+    });
+  }
+});
+</script>
+
+<script type="text/javascript">
+	var is_s5redirection = false;
+	if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+		var msViewportStyle = document.createElement("style")
+		msViewportStyle.appendChild(document
+				.createTextNode("@-ms-viewport{width:auto!important}"))
+		document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+	}
+	
+	 function changeCaptcha(){
+			$("#capimg").attr("src", "jsp/common/captchaimage.jsp?"+(new Date().getTime()));
+			$("#commonCaptcha").val('');
+	}
+	 
+	$(document).ready(function() {
+		//cdac localisation line
+		//$("select.NALOC > option").addClass("NALOC");
+		//end
+		
+// 		loadScript('./js/scripts.js?v=0.1');
+		var windowsize = $(window).width();
+		 if (windowsize > 1600) {  //windowsize > 767
+			$('#bdheight').css("min-height", 400);
+		}
+
+	});
+
+	var width = null;
+	$(document).ready(function() {
+		$('#list').click(function() {
+			//  alert("inside function ready");
+			//alert($('#tableId tr:eq(1) td').length);
+			//	alert("TR Element By Id : "+$('#tr_tableId').length);
+		});
+		
+		/* var timeinter = setInterval(function() {
+			width = $('#tableId tr:eq(1) td').width();
+			if (width > 0) {
+				//  alert("width=="+width);
+				for (var i = 0; i < $('#tableId tr:eq(1) td').length; i++) {
+					// alert("$('#tableId tr:eq(1) td:eq('+i+')').width()====="+$('#tableId tr:eq(1) td:eq('+i+')').width());
+					$('#tableId tr:eq(0) th:eq(' + i + ')').width(
+							$('#tableId tr:eq(1) td:eq(' + i + ')').width());
+				}
+				//	  clearInterval(timeinter);
+			}
+		}, 0); */
+	});
+
+</script>
+
+<link rel="stylesheet" href="https://translation-plugin.bhashini.co.in/v3/website_translation_utility.css"><style><br>    .bhashini-toast {<br>        position: fixed;<br>        left: 50%;<br>        bottom: 20px;<br>        transform: translateX(-50%);<br>        background-color: rgba(0, 0, 0, 0.7);<br>        color: white;<br>        padding: 10px 20px;<br>        border-radius: 5px;<br>        opacity: 0;<br>        transition: opacity 0.3s ease, bottom 0.3s ease;<br>        z-index: 10000;<br>    }<br>    .bhashini-toast.visible {<br>        opacity: 1;<br>        bottom: 40px;<br>    }<br>  <br>    #bhashiniLanguageDropdown .language-option {<br>        list-style: none;<br>    }<br></style></head>
+<body style="padding-bottom: 10rem;" oncontextmenu="return false;">
+<!-- <div id="Sarathi_Lang_ID">Language:</div> -->
+
+
+	<div class="main">
+		<div class="container padding0px">
+			<div class="header">
+				
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<style>
+.change-statenew
+{
+  /*   margin: 0px 4px; */
+}
+.change-statenew a
+{
+    background-color: rgb(60, 118, 61);
+    padding: 5px 6px;
+    border-radius: 5px;
+    letter-spacing: 0.7px;
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(255, 255, 255) !important;
+}
+.csc_agency_app_ {
+	text-decoration: none;
+	color: #ffffff;
+	border-top: 1px solid #ffffff;
+	padding: 0.7rem;
+	background: #1e7c9a;
+	white-space: nowrap;
+}
+ .date_time
+{
+text-align: center;
+} 
+.sarathinew_logo
+{
+width: 100px;
+height: 100px;
+margin-top: -10px;
+}
+.sarathi_parivahantxt
+{
+text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 0.8px;
+    line-height: 25px;
+    font-size: 18px;
+    font-family: auto;
+    padding: 17px 0px 0px 0px;
+    margin-left: -32px;
+}
+.ministryofroad_text p
+{
+    color: #ffffff;
+    margin: 0px 0px 0px 0px !important;
+    line-height: 23px;
+    font-family: auto;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+.ministryofroad_text
+{
+    margin: 10px 0px 0px 0px !important;
+}
+.india_new_emblem img
+{
+padding: 0px 0px 0px 15px;
+}
+.sarathiheader_page
+{
+background:#1CA6EF; 
+clear:both; 
+padding:5px 0px;
+color:ffffff !important;
+}
+.sarathiheader_page .logo-main > img
+{
+padding: 0 0 0 3%;
+}
+
+.sarathiheader_page .login_page > li
+{
+margin: 0 0 0 28%;
+}
+
+.font3 {
+	color: #0008ffd9;
+    font-weight: 550;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: Trebuchet MS;
+/*     padding-right: 10% !important; */
+	margin-bottom: -4px;
+}
+.input-sm, .form-group-sm .form-control {
+    height: 34px;
+    border: 2px solid #ffffff;
+    background: #ecedee;
+    border-radius: 21px;    
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+    margin-right: -58px !important;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+    margin-left: -58px !important;
+}
+.header-date
+{
+    color:#1c8fd1;
+}
+.col-md-offset-1 {
+    margin-left: 6.333333%;
+}
+.red
+{
+	color:#ffffff !important;
+}
+
+@media screen and (max-width: 600px) {
+	.font3size {font-size:1.6em;
+	
+	}
+	
+.header {
+   
+    background: #15a7ef !important;
+}
+.sarathiheader_page .logo-main > img
+{
+padding: 0 0 0 0%;
+}
+.sarathinew_logo
+{
+margin-top: 0px;
+}
+.date_time
+{
+text-align: center;
+}
+}
+@media (min-width: 551px) and (max-width: 991px) {
+	.font3size {font-size:1.6em;}
+	.navbar-inverse .navbar-nav > li > a {
+    color: #081e5b !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+.sarathiheader_page .logo-main > img
+{
+padding: 0 0 0 0%;
+}
+.nav > li > a {
+    padding: 6px;
+}	
+.header {
+    
+    background: #15a7ef !important;
+}
+.form-control {
+    margin:  0 0 8px !important;
+}
+.date_time
+{
+text-align: center;
+}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.font3size {font-size:1.7em;}
+}
+@media screen and (min-width: 1200px) {
+	.font3size {font-size:1.7em;}
+}
+.blink {
+  animation: blinker 1s step-start infinite;
+  background-color: #f99a07;
+}
+
+@keyframes blinker {
+  30% {
+    opacity: 0;
+  }
+}
+</style>
+
+
+
+<div class="sarathiheader_page">
+	<div class="row">
+		<div class="col-md-6 col-sm-6 col-xs-12 mb_textcenter">
+					<div class="col-md-7 col-sm-7 col-xs-12">
+			 <div class="ministry_nic_logo padding0px mb_textcenter">
+				<img src="https://sarathi.parivahan.gov.in/sarathiservice/images/logo/ministry-nic-logo.png" alt="Ministrylogo">
+			</div> 			
+			</div>
+			<div class="col-md-5 col-sm-5 col-xs-12" style="text-align: center;">
+			 <div class="ministry_nic_logo padding0px mb_textcenter">
+				<img src="https://sarathi.parivahan.gov.in/sarathiservice/images/logo/parivahan-logo.png" alt="Sarathilogo">
+			</div>			
+			</div>
+		</div>
+
+		<div class="col-md-3 col-sm-3 col-xs-12 date_time mb_textcenter" style="">
+			<ul class="list-unstyled sarathidate" style="padding-top: 8px; text-decoration:none;">		        
+				<li>
+					<div class="sarathidate_time padding0px" style="color:ffffff; font-size:12px; ">
+						<label class="margin0px bold" style="color: #000;">DATE:</label> <span id="currdate" class="NALOC" style="color:#ffffff !important;">19-10-2026</span>&nbsp;&nbsp;&nbsp;
+						<label style="color: #000; letter-spacing: 0.5px;">TIME:</label> <span id="time" class="" style="color:#ffffff;">06:46:03 PM</span>
+					</div>
+				</li>
+			    <li>
+			    <div style="margin-top: 0.7rem; text-align: center !important; color: #000; border-radius: 5px !important;">
+			    
+			  
+						<!-----------Change State------------>
+					
+					
+						<span class="change-statenew"> 
+								<a href="stateSelection.do" style="">Change State</a>
+							
+						</span>
+					
+				</div>
+			    </li> 
+				<li style="margin-top: 0.7rem;">
+					
+				</li>
+			</ul>	
+		</div>
+		<div class="col-md-1 col-sm-12 col-xs-12 mb_textcenter">
+			<div class="bhashini-plugin-container" id="bhashini-plugin-container1" style="display: flex;align-items: center;gap: 10px; width: 10;">Language:<div class="dont-translate bhashini-skip-translation bhashini-dropdown" id="bhashini-translation" title="Translate this page!">
+        <button role="combobox" aria-label="Language Translator" aria-expanded="false" aria-haspopup="listbox" aria-controls="bhashiniLanguageDropdown" class="bhashini-dropdown-btn">
+          <div class="bhashini-dropdown-btn-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"><path d="M14.125 3.735V12H12.91V3.735H11.815V2.67H15.685V3.735H14.125ZM8.47 2.52C9.25 2.52 9.845 2.715 10.255 3.105C10.675 3.495 10.885 3.985 10.885 4.575C10.885 5.005 10.77 5.395 10.54 5.745C10.32 6.085 9.99 6.355 9.55 6.555C9.11 6.755 8.56 6.865 7.9 6.885L7.825 5.835C8.505 5.815 8.985 5.695 9.265 5.475C9.555 5.255 9.7 4.96 9.7 4.59C9.7 4.23 9.58 3.97 9.34 3.81C9.11 3.65 8.84 3.57 8.53 3.57C8.16 3.57 7.825 3.62 7.525 3.72C7.225 3.82 6.905 3.955 6.565 4.125L6.19 3.09C6.45 2.95 6.77 2.82 7.15 2.7C7.54 2.58 7.98 2.52 8.47 2.52ZM11.05 8.73C11.05 9.19 10.945 9.575 10.735 9.885C10.525 10.195 10.24 10.425 9.88 10.575C9.53 10.725 9.13 10.8 8.68 10.8C8.11 10.8 7.58 10.66 7.09 10.38C6.61 10.1 6.15 9.655 5.71 9.045C5.28 8.435 4.855 7.64 4.435 6.66L5.5 6.27C5.79 6.98 6.09 7.595 6.4 8.115C6.72 8.625 7.06 9.02 7.42 9.3C7.78 9.57 8.165 9.705 8.575 9.705C8.955 9.705 9.265 9.62 9.505 9.45C9.745 9.27 9.865 8.985 9.865 8.595C9.865 8.115 9.7 7.7 9.37 7.35C9.04 7 8.64 6.68 8.17 6.39L9.055 6.345L9.7 6.21C9.84 6.33 9.995 6.475 10.165 6.645C10.335 6.815 10.47 6.985 10.57 7.155L10.645 7.44C10.775 7.63 10.875 7.83 10.945 8.04C11.015 8.25 11.05 8.48 11.05 8.73ZM11.29 6.75C11.77 6.75 12.185 6.715 12.535 6.645C12.885 6.565 13.295 6.44 13.765 6.27V7.35C13.335 7.54 12.945 7.665 12.595 7.725C12.255 7.785 11.88 7.815 11.47 7.815C11.32 7.815 11.145 7.805 10.945 7.785C10.745 7.755 10.555 7.725 10.375 7.695C10.205 7.655 10.08 7.62 10 7.59L9.295 6.75L9.385 6.525C9.675 6.595 9.98 6.65 10.3 6.69C10.62 6.73 10.95 6.75 11.29 6.75Z" fill="#1D0A69"></path><path d="M19.63 22L18.426 18.906H14.464L13.274 22H12L15.906 11.962H17.04L20.932 22H19.63ZM18.048 17.786L16.928 14.762C16.9 14.6873 16.8533 14.552 16.788 14.356C16.7227 14.16 16.6573 13.9593 16.592 13.754C16.536 13.5393 16.4893 13.376 16.452 13.264C16.3773 13.5533 16.298 13.838 16.214 14.118C16.1393 14.3887 16.074 14.6033 16.018 14.762L14.884 17.786H18.048Z" fill="#1D0A69"></path></svg>
+          </div>
+        </button>
+        <ul class="bhashini-dropdown-content" id="bhashiniLanguageDropdown" role="listbox" aria-label="Select language"><li class="dont-translate language-option" data-value="en" tabindex="0" role="option" aria-selected="false">English </li><li class="dont-translate language-option" data-value="as" tabindex="0" role="option" aria-selected="false">Assamese <span lang="as">(à¦…à¦¸à¦®à§€à¦¯à¦¼à¦¾)</span></li><li class="dont-translate language-option" data-value="bn" tabindex="0" role="option" aria-selected="false">Bengali <span lang="bn">(à¦¬à¦¾à¦‚à¦²à¦¾)</span></li><li class="dont-translate language-option" data-value="brx" tabindex="0" role="option" aria-selected="false">Bodo <span lang="brx">(à¤¬à¤¡à¤¼à¥‹)</span></li><li class="dont-translate language-option" data-value="doi" tabindex="0" role="option" aria-selected="false">Dogri <span lang="doi">(à¤¡à¥‹à¤—à¤°à¥€)</span></li><li class="dont-translate language-option" data-value="gom" tabindex="0" role="option" aria-selected="false">Goan Konkani <span lang="gom">(à¤—à¥‹à¤µà¤¾ à¤•à¥‹à¤‚à¤•à¤£à¥€)</span></li><li class="dont-translate language-option" data-value="gu" tabindex="0" role="option" aria-selected="false">Gujarati <span lang="gu">(àª—à«àªœàª°àª¾àª¤à«€)</span></li><li class="dont-translate language-option" data-value="hi" tabindex="0" role="option" aria-selected="false">Hindi <span lang="hi">(à¤¹à¤¿à¤¨à¥à¤¦à¥€)</span></li><li class="dont-translate language-option" data-value="kn" tabindex="0" role="option" aria-selected="false">Kannada <span lang="kn">(à²•à²¨à³à²¨à²¡)</span></li><li class="dont-translate language-option" data-value="ks" tabindex="0" role="option" aria-selected="false">Kashmiri <span lang="ks">(à¤•à¤¶à¥à¤®à¥€à¤°à¥€)</span></li><li class="dont-translate language-option" data-value="mai" tabindex="0" role="option" aria-selected="false">Maithili <span lang="mai">(à¤®à¥ˆà¤¥à¤¿à¤²à¥€)</span></li><li class="dont-translate language-option" data-value="ml" tabindex="0" role="option" aria-selected="false">Malayalam <span lang="ml">(à´®à´²à´¯à´¾à´³à´‚)</span></li><li class="dont-translate language-option" data-value="mni" tabindex="0" role="option" aria-selected="false">Manipuri <span lang="mni">(à¦®à¦£à¦¿à¦ªà§à¦°à§€)</span></li><li class="dont-translate language-option" data-value="mr" tabindex="0" role="option" aria-selected="false">Marathi <span lang="mr">(à¤®à¤°à¤¾à¤ à¥€)</span></li><li class="dont-translate language-option" data-value="ne" tabindex="0" role="option" aria-selected="false">Nepali <span lang="ne">(à¤¨à¥‡à¤ªà¤¾à¤²à¥€)</span></li><li class="dont-translate language-option" data-value="or" tabindex="0" role="option" aria-selected="false">Odia <span lang="or">(à¬“à¬¡à¬¼à¬¿à¬†)</span></li><li class="dont-translate language-option" data-value="pa" tabindex="0" role="option" aria-selected="false">Punjabi <span lang="pa">(à¨ªà©°à¨œà¨¾à¨¬à©€)</span></li><li class="dont-translate language-option" data-value="sa" tabindex="0" role="option" aria-selected="false">Sanskrit <span lang="sa">(à¤¸à¤‚à¤¸à¥à¤•à¥ƒà¤¤)</span></li><li class="dont-translate language-option" data-value="sat" tabindex="0" role="option" aria-selected="false">Santali <span lang="sat">(à¤¸à¤‚à¤¤à¤¾à¤²à¥€)</span></li><li class="dont-translate language-option" data-value="sd" tabindex="0" role="option" aria-selected="false">Sindhi <span lang="sd">(Ø³Ù†ÚŒÙŠ)</span></li><li class="dont-translate language-option" data-value="ta" tabindex="0" role="option" aria-selected="false">Tamil <span lang="ta">(à®¤à®®à®¿à®´à¯)</span></li><li class="dont-translate language-option" data-value="te" tabindex="0" role="option" aria-selected="false">Telugu <span lang="te">(à°¤à±†à°²à±à°—à±)</span></li><li class="dont-translate language-option" data-value="ur" tabindex="0" role="option" aria-selected="false">Urdu <span lang="ur">(Ø§Ø±Ø¯Ùˆ)</span></li><div class="bhashini-branding"><div class="bhashini-feedback-div" title="Feedback"><button class="bhashini-feedback-button " title="Feedback"><img src="https://translation-plugin.bhashini.co.in/v3/feedback.svg" alt="feedback"></button></div><span>Powered by</span><a href="https://bhashini.gov.in" target="_blank" rel="noopener noreferrer" aria-label="Visit Bhashini website"><img src="https://translation-plugin.bhashini.co.in/v3/bhashini-logo.png" alt="Bhashini Logo"></a></div></ul>
+    </div></div>
+		</div>
+		
+			<div class="col-md-2 col-sm-2 col-sm-12 col-xs-12 mb_textcenter" style="text-align: center;">
+				<div class="sarathi_login">
+					<ul class="list-unstyled" style="padding: 6px 0 0 0px;">
+					<li> <span class="font_increase">
+                    <a href="#" id="decfont" style="color: black;">A<sup>-</sup></a>
+                </span>
+                <span class="font_increase">
+                    <a href="#" id="resetfont" style="color: black;">A</a>
+                </span>
+                <span class="font_increase">
+                    <a href="#" id="incfont" style="color: black;">A<sup>+</sup></a>
+                </span></li>
+			        	<li style="margin: 10px 0px 0px 0px;"><a id="login" href="sarathilogin.do" style="background-color: #3c763d;padding: 5px 16px; border-radius: 5px;color:#ffffff !important; letter-spacing: 0.9px; font-size: 13px;text-decoration: none; display: none;">Login</a></li>
+			          <!-- 	<li style="margin-top: 0.7rem;"><div id="Sarathi_Lang_ID">Language:</div></li> -->
+			          	<li style="margin-top: 0.7rem;">
+			        	  	
+			          	</li>
+			        </ul>			        	
+		        </div>		        
+	        </div>
+	    
+	</div>
+</div>
+
+
+	
+	
+		<div class="col-md-12 padding0px" style="text-align: center;">
+			<span id="assStateLbl_id" class="font3 font3size" style="cursor: pointer;">
+				TRANSPORT DEPARTMENT, GOVERNMENT OF KARNATAKA
+			</span>
+		</div>
+	
+	
+	<!--<div class="col-md-12 padding0px" style="text-align: center;">
+		<span class="font3 font3size" style="font-size:1.2em;color:#f99a07">
+			<a class="blink" target="_blank" href="https://sarathi.parivahan.gov.in/sarathicms/api/v1/get-resource/NEVNYm02QUp4OG1VRGFNc01LWm0vZkZjYTZTQkMwOXpxendzL1NjZ1d0RHlxVjZRZUNTRDAyUDB6ZVNzb1YweVVpTUdGaUhlc083b2JaWWduQjdYMXc9PQ==">Click here</a> for the Advisory from the MoRTH regarding the validity of Licences during the disruption of SARATHI services
+		</span>
+	</div> -->
+	
+	
+	
+	<form id="csc_agency_post_sub">
+		<input type="hidden" name="UniqueId" id="UniqueId" autocomplete="off" class="bhashini-skip-translation">
+		<input type="hidden" name="param" id="param" autocomplete="off" class="bhashini-skip-translation">
+		<input type="hidden" name="TYPE" id="TYPE" autocomplete="off" class="bhashini-skip-translation">
+	</form>
+
+<script type="text/javascript">
+$("#assStateLbl_id").click(function() {
+	$('#assStateLbl_popup').modal('show');
+});
+
+$("#state_inassociation").click(function() {
+	$('#assStateLbl_popup').modal('show');
+});
+
+// $("#csc_agency_app_status").click(function() {
+function backtoMahaonlineFun(){
+	var agId='null';
+	var linkLabel='null';
+	var returnUrl='null';
+	console.log("agId :"+agId+": linkLabel:"+linkLabel+": returnUrl:"+returnUrl);
+	backToAgencyPortal();
+	}
+// });
+
+function backToAgencyPortal(){
+	$.ajax({
+        url: "checkApplStatus.do",
+        type: "post",
+        success: function(d) {console.log(d);
+	        if(d.method === 'get') {
+	        	var url;
+	        	if(d.ret_url.indexOf("TYPE=RES") != -1) {
+	        		window.location.href = d.ret_url;
+	        	} else if(d.ret_url.indexOf("TYPE=NO") != -1) {
+	        		if(confirm("No application had submitted with given token. Do you want to proceed?")) {
+	        			url = d.ret_url.replace("TYPE=NO", "TYPE=N");
+	        			window.location.href = url;
+	        		}
+	        	} else if(d.ret_url.indexOf("TYPE=N") != -1) {
+	        		if(confirm("For this application all flows are not completed. Do you want to proceed?")) {
+	        			window.location.href = d.ret_url;
+	        		}
+	        	} else if(d.ret_url.indexOf("#") != -1) {
+	        		
+	        	} else {
+	        		window.location.href = d.ret_url;
+	        	}    	
+	        } else if(d.method === 'post') {
+	        	if(d.id == 'UPeSathi') {
+	        		$("#UniqueId").val(d.UniqueId);
+		        	$("#param").val(d.param);
+		        	$("#TYPE").val(d.TYPE);
+		        	$("#csc_agency_post_sub").attr("action", d.ret_url);
+		        	
+	        		if(d.TYPE == "RES") {
+	        			if(confirm("No application had submitted with given token. Do you want to proceed?")) {
+	        				$("#csc_agency_post_sub").submit();
+	        			}
+		        	} else if(d.TYPE == "NO") {
+		        		if(confirm("For this application all flows are not completed. Do you want to proceed?")) {
+		        			$("#TYPE").val('N');
+		        			$("#csc_agency_post_sub").submit();
+		        		}
+		        	} else if(d.TYPE == "N") {
+		        		$("#csc_agency_post_sub").submit();
+		        	}
+				}
+	        }
+        }
+    });
+}
+
+/* $("#csc_agency_app_status").click(function() {
+	$.ajax({
+        url: "checkApplStatus.do",
+        type: "post",
+        success: function(d) {//alert(d);
+        //window.location.href = d;
+        	 if(d.indexOf("TYPE=RES") != -1) {
+        		window.location.href = d;
+        		/* if(confirm("For this application all the flows are completed.")) {
+        			
+        		} */
+        	 /*} else if(d.indexOf("TYPE=NO") != -1) {
+        		if(confirm("No application had submitted with given token. Do you want to proceed?")) {
+        			d = d.replace("TYPE=NO", "TYPE=N");
+        			window.location.href = d;
+        		}
+        	} else if(d.indexOf("TYPE=N") != -1) {
+        		if(confirm("For this application all flows are not completed. Do you want to proceed?")) {
+        			window.location.href = d;
+        		}
+        	} else if(d.indexOf("#") != -1) {
+        		//window.location.href = d;
+        	} else {
+        		window.location.href = d;
+        	}
+        }
+    });
+}); */
+</script>
+<script> 
+
+	
+	var dateStr=1792415189012
+
+	var serverTimeMillisGMT = Date.parse(new Date(dateStr).toUTCString());
+	var str="AM";
+	var count=0;
+	function msToTime(duration) {
+        var milliseconds = duration % 1000
+            , seconds = Math.floor((duration / 1000) % 60)
+            , minutes = Math.floor((duration / (60 * 1000)) % 60)+30
+            , hours = Math.floor((duration/(1000*60*60))%24)+5+parseInt(minutes>59 ? "1" :"0" );
+//         console.log("hours==> "+hours);
+       
+        if(hours>12){
+            str=hours==24 ? "AM" :"PM";
+        	hours= hours-12;
+        	
+        }
+        
+        if(minutes>59){
+        	minutes= minutes-60;
+        }
+        if(hours>12 && hours<25){
+        	hours=hours-12;
+        	
+        }
+        if(hours==12){
+        	str="PM";
+        }
+        	
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10)   ? "0" + minutes :  minutes ;
+        seconds = (seconds < 10)   ? "0" + seconds :  seconds ;
+        count=seconds;
+		var time=hours + ":" +  minutes + ":" + seconds;
+		
+        return time;
+    }
+    
+function noBack(){ 
+	window.history.forward(1);
+}
+var serverTime = "2026-10-19 18:36:29.012242";
+		var localTime = new Date();
+		var ser = new Date(serverTime);
+		var ti = localTime.toLocaleTimeString();
+		var serti = ser.toLocaleTimeString();
+		var myVar = setInterval(function() {
+			myTimer();
+		}, 1000);
+
+		var offset, diff;
+		var localMillisUTC = Date.parse(new Date(serverTime).toUTCString());
+		offset = serverTimeMillisGMT - localMillisUTC;
+		diff = localMillisUTC + offset;
+		var d = new Date(serverTime);//time;
+		var curr_date = d.getDate() < 10 ? "0" + d.getDate() : d.getDate();
+		var curr_month = d.getMonth() < 9 ? "0" +(d.getMonth() + 1) : parseInt(d.getMonth()) + 1; 
+		//var curr_month = parseInt(d.getMonth()) + 1;
+		var curr_year = d.getFullYear();
+		var colorArr = new Array();
+		colorArr.push("#FA026A");
+		colorArr.push("#9B02FA");
+		colorArr.push("#4402FA");
+		function myTimer() {
+			try {
+				document.getElementById("currdate").innerHTML = curr_date + "-"
+						+ curr_month + "-" + curr_year;
+				diff = diff + 1000;
+				document.getElementById("time").innerHTML = msToTime(diff)
+						+ " " + str;
+				var i = count % 3;
+				if (i == 0 || i == 1 || i == 2) {
+					var color = Math.floor(Math.random() * 16777215).toString(
+							16);
+					var marq = $("#marq");
+					marq.css('color', colorArr[i]);
+				}
+				
+			} catch (e) {
+			}
+		}
+
+		function brighten(color, percent) {
+			var r = parseInt(color.substr(1, 2), 16);
+			var g = parseInt(color.substr(3, 2), 16);
+			var b = parseInt(color.substr(5, 2), 16);
+
+			return '#' + Math.min(255, Math.floor(r * percent)).toString(16)
+					+ Math.min(255, Math.floor(g * percent)).toString(16)
+					+ Math.min(255, Math.floor(b * percent)).toString(16);
+		}
+	</script>
+	<!--------------------font-size (A, A-, A+)------------------- -->
+	<script> 
+	$('#incfont').click(function () {
+        curSize = parseInt($('body').css('font-size')) + 2;
+        if (curSize <= 24)
+            $('body').css('font-size', curSize);
+    });
+    $('#decfont').click(function () {
+        curSize = parseInt($('body').css('font-size')) - 2;
+
+        if (curSize >= 12)
+            $('body').css('font-size', curSize);
+    });
+    $('#resetfont').click(function () {
+        curSize = parseInt($('body').css('font-size'));
+        $('body').css('font-size', '14px');
+    });
+
+   $('.form-text').bind("cut copy paste", function(e) {
+      e.preventDefault();
+      alert("You cannot paste into this text field.");
+      $('.form-text').bind("contextmenu", function(e) {
+     e.preventDefault();
+  }); });
+
+ $(".faq li > *:not(h4)").hide();
+ $(".faq h4").click(function() {
+ $(this).siblings().slideToggle("slow");
+ });
+	</script>
+	
+
+
+
+			</div>
+			<div class="width100p">
+				
+			</div>
+			<div id="bdheight" class="content">
+				
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+
+<script type="text/javascript" src="js/jquery/jquery.countdownTimer.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.countdownTimer.css">
+<style type="text/css">
+ .invalid { border-color: red; }
+ .valid { border-color: #0000FF; }
+ .redColor { color: red; }
+ #h4data ul, #h4data ul li {
+      all: revert !important;
+    }
+#h4data ul {
+      list-style-type: disc !important;
+      padding-left: 40px !important;
+      margin-left: -75px !important;
+      list-style-position: outside !important;
+      display: block !important;
+    }
+#h4data ul li {
+      display: list-item !important;
+      margin-bottom:45px;
+    }
+#h4data.value {
+    font-size: 18px; 
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    loadScript();
+  });
+
+function loadScript() {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "./js/scripts.js?v=0.1";
+    script.id = "scripts";
+    document.body.appendChild(script);
+    $('#scripts').remove();
+  }
+
+	 function countdown() {
+		 
+		 var timeLeft = 60;
+		 var elem = document.getElementById('some_div');
+		 var timerId = setInterval(countdown, 1000);
+	 if (timeLeft == -1) {
+	 clearTimeout(timerId);
+	 doSomething();
+	 } else {
+			 elem.innerHTML = timeLeft + ' seconds remaining';
+	timeLeft--;
+	 }
+	 } 
+		function goToHomePage() {
+			
+			document.ekycformDisplay.action = "sarathiHomePublic.do";
+			document.ekycformDisplay.submit();
+
+		}
+</script>
+<script>
+$( document ).ready(function() {
+	$('#captchaBox').show();
+	$('#generateResendSarathiotp').hide();
+if(teluguConsent.value=='AP'){
+	$('#tel1').show();
+	$('#tel2').show();
+	$('#tel3').show();
+	$('#tel4').show();
+	$('.concent').show();
+
+
+}
+if(mobileNumber.value.trim().length>=10){
+	$('.generateSarathiotp').prop("disabled", false);
+}
+/* if(msg.value== "noStcd"){
+	alert('State Not Found'); 
+	window.location.href='stateSelectBean.do';
+} */
+var state =$('#stFrmHome').val();
+if($("#msg").val()=="cs"&&llexamWithAadhar.value=="cs"){
+// if(msg.value=="cs"&&llexamWithAadhar.value=="cs"){
+	/* shiv */
+	/* alert("contactless_chosen") */
+	$('#radiobuttons').hide();
+	$('#ekycFormPageId2').show();
+	$("#ekycFormPageId2>fieldset.scheduler-border").removeClass('scheduler-border');
+	$("#backPage").val('cancel');
+	var url="sarathiHomePublic.do";
+	//$("#backPage").attr('window.location.href',url);
+	document.querySelector('#backPage').setAttribute("onclick","window.location.href='sarathiHomePublic.do'")
+
+
+	/* shiv */
+
+}else if($("#msg").val()=="noncs" && llexamWithAadhar.value=="noncs"){
+	$('#radiobuttons').hide();
+	$('#authentiateWithSarathi').show();
+	$("#ekycFormPageId2>fieldset.scheduler-border").removeClass('scheduler-border');
+	$("#backPage").val('cancel');
+	var url="sarathiHomePublic.do";
+	document.querySelector('#backPage').setAttribute("onclick","window.location.href='sarathiHomePublic.do'")
+}else{
+// 	document.getElementById("iid").textContent= $("#msg").val();
+// 	document.getElementById("h4id").textContent= llexamWithAadhar.value;
+// 	document.getElementById("note").textContent= note3.value
+	let value=  llexamWithAadhar.value + $("#msg").val() + note3.value ;
+	let splitSentences =  value
+	  .split('.')
+	  .map(s => s.trim())
+	  .filter(s => s.length > 0);
+	const container = document.getElementById("h4data");
+	let ul = document.createElement("ul");
+	splitSentences.forEach(sentence => {	
+	let li = document.createElement("li");
+	li.textContent = sentence + '.';
+	ul.appendChild(li);
+ });
+   container.appendChild(ul);
+}
+
+});
+</script>
+
+
+
+<script type="text/javascript">
+/* shiv to enable genOtp*/
+
+ function EnableDisable(aadharNumber) {
+     var generateotp = document.getElementById("generateotp");
+
+     if (aadharNumber.value.trim().length >= 12){  
+    	if( $('input[name=authenticateWithType]:checked').val()=='A'){
+         generateotp.disabled = false;
+    	}
+    	if( $('input[name=authenticateWithType]:checked').val()=='V'){
+    		 if (aadharNumber.value.trim().length >= 16){
+    	         generateotp.disabled = false; //enables the button
+
+    		 }else{
+    			 generateotp.disabled = true;
+    		 }
+    	}
+    	
+    	
+     } else {
+         generateotp.disabled = true;
+     }
+ };
+ 
+//  function EnableDisableOtp(otp) {
+//      var verify = document.getElementById("verify");
+//      alert("value is"+verify);
+//      if (otp.value.trim().length >= 6) {  
+//     	/*  $("aadharNumber").prop("readonly",true); */    	
+//     	 verify.disabled = false;
+    	 
+//      } else {
+//     	 verify.disabled = true;
+    	
+//      }
+//  };
+
+function EnableDisableOtp() {
+    var otp = document.getElementById("otpNumber"); 
+    var verify = document.getElementById("verify");
+
+    if (otp.value.trim().length >= 6) {  
+        verify.disabled = false;
+    } else {
+        verify.disabled = true;
+    }
+};
+	
+ /*function EnableDisableMB(mnumber) {
+     var generateSarathiotp = document.getElementById("generateSarathiotp");
+
+     if (mnumber.value.trim().length >= 10){  
+    	 generateSarathiotp.disabled = false;
+    			 
+    		 }else{
+    			 generateSarathiotp.disabled = true;
+    		 }
+    	}*/
+ function EnableDisableMB() {
+    var generateSarathiotp = document.getElementById("generateSarathiotp");
+    var mobileNumber=document.getElementById("mobileNumber");
+    var captcha=document.getElementById("entcaptxt");
+
+    if (mobileNumber.value.trim().length >= 10 && captcha.value.trim().length>=6){  
+   	    generateSarathiotp.disabled = false;
+   	}else{
+   	    generateSarathiotp.disabled = true;
+   	}
+ }
+ 
+ /*function EnableDisableOtpVerifySarathi(otp) {
+     if (otp.value.trim().length >= 6) {  
+    	/*  $("aadharNumber").prop("readonly",true);     	
+    	 verifySarathi.disabled = false;
+    	 
+     } else {
+    	 verifySarathi.disabled = true;
+    	
+     }
+ };*/
+function EnableDisableOtpVerifySarathi() {
+var otp=document.getElementById("otpNumberSarathi");
+var capcha=document.getElementById("entcaptxt1");
+var checkbox=document.getElementById('otpCheckbox'); 
+
+ if (otp.value.trim().length >= 6 && capcha.value.trim().length >= 6 && checkbox.checked) {  
+	/*  $("aadharNumber").prop("readonly",true); */    	
+	 verifySarathi.disabled = false;
+	 
+ }
+ else {
+	 verifySarathi.disabled = true;
+	
+ }
+};
+  	 
+ </script>
+
+
+<script>
+	  function getRtoFromStCd()
+	 {
+	 alert("Entered getRtoFromStCd");
+	 $('#ekycFormPageId2').hide();
+	 if($('#stateSelected').val() != undefined && $('#stateSelected').val() != null
+	 && $('#stateSelected').val() != '--Select--' && $('#stateSelected').val() != '-1')
+	 {
+	 $.ajax({
+	 type:'POST',
+	 url:'getRtoList.do?stateSelected='+$('#stateSelected').val(),
+	 dataType:'json',
+	 success: function(data){
+	 var $select = $('#rtoSelected');
+	 var options="<option value='-1'>--Select--</option>";
+	 $.each(data, function(key,value) { 
+	 options += "<option value='"+key+"'>"+value+"</option>";
+	 }); 
+	 $("#rtoSelected").html(options);
+	 $("#rtoSelected1").html(options);
+
+	 }
+	 });
+	 }
+	 }
+	 function getRtoFromStCdAppicant()
+	 {
+	alert("Entered getRtoFromStCdAppicant method");
+	$('#ekycFormPageId3').hide();
+	 if($('#stateSelectedApplicant').val() != undefined && $('#stateSelectedApplicant').val() != null
+	 && $('#stateSelectedApplicant').val() != '--Select--' && $('#stateSelectedApplicant').val() != '-1')
+	 {
+	 $.ajax({
+	 type:'POST',
+	 url:'getRtoList.do?stateSelected='+$('#stateSelectedApplicant').val(),
+	 dataType:'json',
+	 success: function(data){
+	 var $select = $('#rtoSelected1');
+	 var options="<option value='-1'>--Select--</option>";
+	 $.each(data, function(key,value) { 
+	 options += "<option value='"+key+"'>"+value+"</option>";
+	 }); 
+	 $("#rtoSelected1").html(options);
+	 
+
+	 }
+	 });
+	 }
+	 }  
+
+function enablefunction(){
+	var state = $('#stFrmHome').val();
+	if(state !="AP"){
+		 $('#radiobuttons').hide();
+		 var mob_nur=document.getElementById("mobileNumber").value;
+		 //alert("mob_nur: "+mob_nur);
+			if(mob_nur ===null || mob_nur===undefined ||mob_nur===""){
+				document.getElementById("mobileNumber").disabled = false;
+			}else{
+				document.getElementById("mobileNumber").disabled = true;
+			}
+		 $('#authentiateWithSarathi').show();
+	}
+	}
+      function adharHoldTypeFun() {
+			if ($("input[name=aadhaarHoldingType]:checked").val() != undefined) {
+			if ($("input[name=aadhaarHoldingType]:checked").val() == '0') {
+				$('#ekycFormPageId').hide();
+				$('#ekycFormPageId2').hide();
+				$('#buttons').show();
+				$('#Non-Ekyc').show();
+				$('#Non-EkycM').hide();
+				$('#Ekyc').hide();
+			    //document.getElementById("iid").textContent= $("#msg").val();
+				$('#instructions').show();
+				/* $('#h4id').hide(); */
+				//$('#iid').show();
+				$('#authentiateWithSarathi').hide();
+				
+			}
+			 else if($("input[name=aadhaarHoldingType]:checked").val() == '1'){
+				$('#authentiateWithSarathi').hide();
+				/* $('#ekycFormPageId').show(); */ //to enable without rto selection 11-11-2020
+				$('#buttons').show();
+				/* $('#iid').hide(); */
+				$('#h4id').show();
+				$('#h4data').show();
+				$('#Ekyc').show();
+				$('#Non-Ekyc').hide();
+				$('#Non-EkycM').hide();
+
+
+
+				} else if ($("input[name=aadhaarHoldingType]:checked").val() == '2') {
+					$('#ekycFormPageId').hide();
+					$('#ekycFormPageId2').hide();
+					$('#buttons').show();
+					$('#Non-Ekyc').hide();
+					$('#Non-EkycM').show();
+					$('#Ekyc').hide();
+					$('#instructions').show();
+					$('#authentiateWithSarathi').hide();
+			}
+			}
+	} 
+		
+ 	 function resetDL1(val)
+	 {
+		 changeCaptcha();
+		 changeCaptcha1();
+		 $('#captchaBox').show();
+		 $('#otpNumberSarathi').val('');
+		 $('#entcaptxt').val('');
+		 $('#entcaptxt1').val('');
+		 document.getElementById('otpCheckbox').checked=false;
+		 document.getElementById("entcaptxt").innerHTML = "";
+		  document.getElementById("mobilesuccMsgBox").innerHTML = ""; 
+		  document.getElementById("mobotpMsgBox").innerHTML = ""; 
+		  document.getElementById("mobileerrMsgBox").innerHTML = ""; 
+		  document.getElementById("mobileNumber").disabled = false;
+		  document.getElementById("generateSarathiotp").disabled = true;
+		  document.getElementById("generateResendSarathiotp").disabled = true;
+		  document.getElementById("mobileNumber").readOnly = false;
+		  $('#otpbox').hide();
+		  $('#captcha1box').hide();
+		  $('#generateSarathiotp').show();
+		  $('#generateResendSarathiotp').hide();
+		  $('#verifySarathi').hide();
+}
+	 function resetDL(val)
+	 {
+		 changeCaptcha();
+		 changeCaptcha1();
+		 $('#captchaBox').show();
+		 $('#mobileNumber').val('');
+		 $('#otpNumberSarathi').val('');
+		 $('#entcaptxt').val('');
+		 $('#entcaptxt1').val('');
+		 document.getElementById('otpCheckbox').checked=false;
+		 document.getElementById("entcaptxt").innerHTML = "";
+		  document.getElementById("mobilesuccMsgBox").innerHTML = ""; 
+		  document.getElementById("mobotpMsgBox").innerHTML = ""; 
+		  document.getElementById("mobileerrMsgBox").innerHTML = ""; 
+		  document.getElementById("mobileNumber").disabled = false;
+		  document.getElementById("generateSarathiotp").disabled = true;
+		  document.getElementById("generateResendSarathiotp").disabled = true;
+		  document.getElementById("mobileNumber").readOnly = false;
+		  $('#otpbox').hide();
+		  $('#captcha1box').hide();
+		  $('#generateSarathiotp').show();
+		  $('#generateResendSarathiotp').hide();
+		  $('#verifySarathi').hide();
+
+	/*  $('#aadharNumber').val('');
+	 $('#otpNumber').val('');
+	 $('#generateotpdiv').show();
+	 $('#resendotpdiv').hide();
+	 document.getElementById('generateotp').disabled = true;
+	 document.getElementById('otpNumber').disabled = true;
+	 document.getElementById('aadhaarMsgBox').innerHTML="";
+	 document.getElementById('msgBox').innerHTML="";
+	 document.getElementById("checkMe").checked = false;
+	 document.getElementById("checkMe").disabled = true;
+	 document.getElementById("h4id").style.color="lightgray"; 
+	 document.getElementById("aadharNumber").value="";
+	 document.getElementById("aadharNumber").disabled = true;
+	 document.getElementById("verify").disabled = true; */
+	 }
+	 
+	 function validateEkyc(){
+		 document.getElementById("saveid").disabled = true;
+		 document.ekycformDisplay.action = "saveEkycDetails.do";
+		 document.ekycformDisplay.submit();
+		 return true;
+	 }
+	 
+	 
+	 function isNumCheck(evt) {
+		 evt = (evt) ? evt : window.event;
+		 var charCode = (evt.which) ? evt.which : evt.keyCode;
+		 if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+		 	return false;
+		 }else{			 
+			 return true;			 
+		 }
+	 }
+	 
+	 //added code newly for aadharvalidation
+	 function isNumCheck1(evt) {
+    evt = evt || window.event;
+    var charCode = evt.which ? evt.which : evt.keyCode;
+    var input = evt.target || evt.srcElement;
+    var value = input.value;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    if (value.length === 0 && (charCode === 48 || charCode === 49)) {
+        return false;
+    }
+       return true;
+    }
+
+	 
+	 function base64_encode( str )   
+	    {  
+	        if (window.btoa) // Internet Explorer 10 and above  
+	            return window.btoa(unescape(encodeURIComponent( str )));  
+	        else  
+	        {     
+	            // Cross-Browser Method (compressed)  
+	              
+	            // Create Base64 Object  
+	            var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\r\n/g,"\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}} return t;}}  
+	            // Encode the String  
+	            return Base64.encode(unescape(encodeURIComponent( str )));  
+	        }  
+	    } 
+	 //verhoeffs algorithm
+    	const b = [ [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+			[ 1, 2, 3, 4, 0, 6, 7, 8, 9, 5 ],
+			[ 2, 3, 4, 0, 1, 7, 8, 9, 5, 6 ],
+			[ 3, 4, 0, 1, 2, 8, 9, 5, 6, 7 ],
+			[ 4, 0, 1, 2, 3, 9, 5, 6, 7, 8 ],
+			[ 5, 9, 8, 7, 6, 0, 4, 3, 2, 1 ],
+			[ 6, 5, 9, 8, 7, 1, 0, 4, 3, 2 ],
+			[ 7, 6, 5, 9, 8, 2, 1, 0, 4, 3 ],
+			[ 8, 7, 6, 5, 9, 3, 2, 1, 0, 4 ],
+			[ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ] ];
+    	const p = [ [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
+			[ 1, 5, 7, 6, 2, 8, 3, 0, 9, 4 ],
+			[ 5, 8, 0, 3, 7, 9, 6, 1, 4, 2 ],
+			[ 8, 9, 1, 6, 0, 4, 3, 5, 2, 7 ],
+			[ 9, 4, 5, 3, 1, 2, 6, 8, 7, 0 ],
+			[ 4, 2, 8, 6, 5, 7, 3, 9, 0, 1 ],
+			[ 2, 7, 9, 3, 8, 0, 6, 4, 1, 5 ],
+			[ 7, 0, 4, 6, 9, 1, 3, 2, 5, 8 ] ];
+
+        const inv = [0,4,3,2,1,5,6,7,8,9]; 
+
+        function isValidAadhaar(aadhaar) {
+             if (!/^[2-9]\d{11}$/.test(aadhaar)) {
+                  return "Invalid";  
+             }
+             if (/^(\d)\1{11}$/.test(aadhaar)) {
+                  return "AllSame";  
+            }
+            // Verhoeff algorithm check
+           let c = 0;
+           const reversed = aadhaar.split('').reverse().map(Number);
+           for (let i = 0; i < reversed.length; i++) {
+                c = b[c][p[i % 8][reversed[i]]];
+           }
+           return c === 0 ? "Valid" : "Invalid"; 
+       }
+
+       function validateAadhaar() {
+          const input = document.getElementById("aadharNumber").value.trim();
+          const validationResult = isValidAadhaar(input);
+         if (validationResult === "Invalid") {
+               alert("Aadhaar Number is Invalid");
+               return false;
+         }else if (validationResult === "AllSame") {
+             alert("Aadhaar Number is Invalid: All digits Cannot be the same");
+             return false;
+         } else if (validationResult === "Valid") {
+            return true;
+         }
+      }
+
+	 function checkAadharExistence(){
+	 var aadharNo=$("#aadharNumber").val();
+	 if(aadharNo==""||aadharNo==null){
+		 document.getElementById('aadhaarMsgBox').innerHTML="Please Enter your AadharNumber/VID";
+	 }
+	 var eAadhar=base64_encode(aadharNo);
+	 //var state = $('#stateSelected').val();
+	  var state = $('#stFrmHome').val();
+	 //alert("State: "+state);
+	 var rto = $('#rtoSelected').val();
+	//alert("rto: "+rto);
+	 var authenticateWithType;
+	 if($("input[name=authenticateWithType]:checked").val() == undefined){
+	 alert("please select the radio button, that you entered 'Aadhaar' / 'Virtual ID' Aadhar number");
+	 return false;
+	 }else if($("input[name=authenticateWithType]:checked").val() == 'A'){
+	   authenticateWithType = 'A';
+ 	   if(!validateAadhaar()){
+	      return false;
+ 	   }
+	 }else if($("input[name=authenticateWithType]:checked").val() == 'V'){
+	    authenticateWithType = 'V';
+	 } 
+	 if((state != null && (state == '-1' || state == '--Select--')) || (rto != null && (rto == '-1' || rto == '--Select--'))){
+	 //if(((state != null) ||( state != '')) || (rto != null && (rto == '-1' || rto == '--Select--'))){
+	 $("#aadharNumber").val("");
+	 document.getElementById('aadhaarMsgBox').innerHTML="please select the State and Rto";
+	 document.getElementById('msgBox').innerHTML="";
+	 }else if(aadharNo=="" || aadharNo=="0"){
+	 document.getElementById('aadhaarMsgBox').innerHTML="Please Enter the AadharNumber";
+	 document.getElementById('msgBox').innerHTML="";
+	 }else{
+	 document.getElementById('aadhaarMsgBox').innerHTML="";
+	 $.ajax({
+	 type: "post",
+	 url: "checkAadhaar.do",
+	 //data:{'aadharNumber':eAadhar,'authenticateWithType':authenticateWithType}	 ,
+	 async: false,
+	 cache: false,
+	 beforeSend: function() {
+		 $(".loader").show();
+     },
+	 success: function (res) {
+		 //alert("resres   "+res);
+		 if(res!=null){
+		 $('#eadhar').val(res);
+		  genOTPFun();
+		 } else{
+			 alert("Unable to process the request. Please try later or contact administrator.");
+		 }
+	 
+	 },
+	 complete: function(){
+   	  $(window).on("load",function() {
+   		    $(".loader").fadeOut();
+   	  });
+   	  $(".loader").hide();
+     }
+	 });
+	
+	 }
+	 }
+
+function uint8ArrayToBase64(bytes) {
+    let binary = '';
+    const len = bytes.byteLength;
+    for (let i = 0; i < len; i++) {
+        binary += String.fromCharCode(bytes[i]);
+    }
+    return btoa(binary);
+}
+
+async function aadhaarEncryption(data_aadhaar, base64Key){
+	const encoder = new TextEncoder();
+    const data = encoder.encode(data_aadhaar);
+
+    console.log("base64Key=" + base64Key);
+    const keyBytes = Uint8Array.from(window.atob(base64Key), (v) => v.charCodeAt(0));
+    const key = await crypto.subtle.importKey(
+        'raw',
+        keyBytes,
+        { name: 'AES-GCM' },
+        false,
+        ['encrypt', 'decrypt']
+    );
+    console.log("keyBytes=" + keyBytes);
+    const iv = crypto.getRandomValues(new Uint8Array(16));
+    const ciphertext = await crypto.subtle.encrypt(
+        { name: 'AES-GCM', iv: iv },
+        key,
+        data
+    );
+    const encryptedData = new Uint8Array(iv.length + ciphertext.byteLength);
+    encryptedData.set(iv);
+    encryptedData.set(new Uint8Array(ciphertext), iv.length);
+    var enc_sal_Aa = uint8ArrayToBase64(encryptedData);
+    return enc_sal_Aa;
+}
+
+async function genOTPFun(){
+//		alert("genOTPFun"); 
+	var data_aadhaar = $("#aadharNumber").val();
+    const base64Key = $("#eadhar").val();;
+    const enc_sal_Aa = await aadhaarEncryption(data_aadhaar, base64Key);
+    console.log("enc_sal_Aa=" + enc_sal_Aa);
+    $('#enc_sal_Aa').val(enc_sal_Aa);
+	 var state = $('#stFrmHome').val();
+	 var rto = $('#rtoSelected').val();
+	 var authenticateWithType;
+	 if($("input[name=authenticateWithType]:checked").val() == undefined){
+	 alert("please select the radio button, that you entered 'Aadhaar' / 'Virtual ID' Aadhar number");
+	 return false;
+	 }else if($("input[name=authenticateWithType]:checked").val() == 'A'){
+	 authenticateWithType = 'A';
+	 }else if($("input[name=authenticateWithType]:checked").val() == 'V'){
+	 authenticateWithType = 'V';
+	 } 
+	 document.getElementById("resetDl").disabled = true;
+	 var otpCount = document.getElementById('otpCount').value;
+	 if(Number(otpCount)>=0){
+	 otpCount = Number(otpCount)+1;
+	 }
+	 if((state != null && (state == '-1' || state == '--Select--')) || (rto != null && (rto == '-1' || rto == '--Select--'))){
+	 document.getElementById('aadhaarMsgBox').innerHTML="Please select state and rto";
+	 document.getElementById('msgBox').innerHTML="";
+	 }else if(data_aadhaar=="" || data_aadhaar=="0"){
+	 document.getElementById('aadhaarMsgBox').innerHTML="Please Enter the AadharNumber";
+	 document.getElementById('msgBox').innerHTML="";
+	 }else{
+		 $.ajax({
+			    type: "POST",
+			    url: "ekycservice.do",
+			    data: {
+			        aadharNumber: enc_sal_Aa,
+			        authenticateWithType: authenticateWithType
+			    },
+			    cache: false,
+			    timeout: 120000,
+			    beforeSend: function () {
+			        $(".loader").show();
+			        $("#resetDl").prop("disabled", true);
+			    },
+			    success: function (res) {
+			        if (!res || !res.retStatus) {
+			            alert("Invalid response received from server.");
+			            return;
+			        }
+			        console.log("res:"+res)
+			        var str = res.retStatus.split(",");
+			        console.log("str:"+str)
+			        var statusVal = str[0];
+			        console.log("statusVal:"+statusVal)
+			        var status = str.length > 1 ? str[1] : "";
+			        console.log("status:"+status)
+			        $("#reqId").val(res.reqId);
+			        if (statusVal === "y") {
+			            $("#otpNumber").prop("disabled", false);
+			            $("#msgBox").html(status);
+			            $("#aadharNumber").prop("readonly", true);
+			            $("#aadhaarMsgBox").html("");
+			            $("#otpCount").val(otpCount);
+			            $("#generateotpdiv").hide();
+			            $("#resendotpdiv").show();
+			            $("#resendotp").prop("disabled", true);
+			            $("#ms_timer").countdowntimer({
+			                minutes: 1,
+			                seconds: 0,
+			                size: "sm",
+			                borderColor: "#1682ba",
+			                backgroundColor: "#1682ba",
+			                fontColor: "#ffffff",
+			                timeUp: function () {
+			                    $("#resendotp").prop("disabled", false);
+			                    $("#resetDl").prop("disabled", false);
+			                }
+			            });
+			        } else {
+			            alert(status);
+			            $("#aadhaarMsgBox").html("");
+			            $("#resetDl").prop("disabled", false);
+			            $("#reqId").val(res.reqId);
+			            window.location.href = "ekycForm.do";
+			        }
+			    },
+			    error: function (xhr, textStatus, errorThrown) {
+			    	 if (xhr.status === 504) {
+			             alert("Server is taking too long to respond. Please try again.");
+			         }else if (status === "timeout") {
+			            alert("Request timed out. Please try again.");
+			            window.location.href = "ekycForm.do";
+			        } else {
+			            alert("An error occurred while processing your request. Please try again.");
+			            console.error("Status:", textStatus);
+			            console.error("Error:", errorThrown);
+			            console.error("Response:", xhr.responseText);
+			        }
+			    },
+			    complete: function () {
+			        $(".loader").hide();
+			        $("#resetDl").prop("disabled", false);
+			    }
+			});
+	 }
+	 }
+
+ function onfocusremove(){
+		document.getElementById('mobileerrMsgBox').innerHTML="";
+		document.getElementById('mobotpMsgBox').innerHTML="";
+		const elems = document.querySelectorAll('#mobileNumber');
+		var otpboarder = document.getElementById('otpNumberSarathi');
+		const elems1 = document.querySelectorAll('#otpNumberSarathi');
+		for (var i = 0; i < elems.length; i++) {                
+	        if (elems[i].classList.contains("invalid")) {
+	          console.log(elems[i].className);
+	          elems[i].classList.remove('invalid');
+	          elems[i].classList.remove('valid');
+	          console.log("Affter remove: "+elems[i].className);
+	          }else{
+	        	  console.log("else: "+elems[i].className);
+	        	  elems[i].classList.remove('valid');
+	        	  elems[i].classList.remove('invalid');
+	        	  console.log("After remove in else: "+elems[i].className);
+		          }
+	          
+	        }
+
+			for (var i = 0; i < elems1.length; i++) {                
+		        if (elems1[i].classList.contains("invalid")) {
+		          console.log(elems1[i].className);
+		          elems1[i].classList.remove('invalid');
+		          elems1[i].classList.remove('valid');
+		          console.log("Affter remove: "+elems1[i].className);
+		          }else{
+		        	  console.log("else: "+elems1[i].className);
+		        	  elems1[i].classList.remove('valid');
+		        	  elems1[i].classList.remove('invalid');
+		        	  console.log("After remove in else: "+elems1[i].className);
+			          }
+		          
+		        }
+
+		}
+
+	 function validatemobile(){
+			//ES2015 introduced two important new JavaScript keywords: let and const.
+		const mobileno = document.getElementById('mobileNumber');
+		var mobileNum=$("#mobileNumber").val();
+		//regacc = /^[0]?[23456789]\d{9}$/ ;
+		regacc = /^[0]?[0-9]\d{9}$/ ;
+		if(mobileNum ===''){//generateotp
+			document.getElementById('mobotpMsgBox').innerHTML="";
+			   document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			   //mobileno.style.border = '1px solid #FF0000';
+			   document.getElementById('mobileerrMsgBox').innerHTML="Please Enter Mobile Number";
+			   document.getElementById('mobileNumber').value="";
+			   document.getElementById('mobileNumber').focus;
+			   document.getElementById('mobotpMsgBox').innerHTML="";
+			   document.getElementById('otpNumberSarathi').innerHTML="";
+			   document.getElementById("otpNumberSarathi").disabled = true;
+			   document.getElementById("verifySarathi").disabled = true;
+			   document.getElementById("generateSarathiotp").disabled = true;//mobile ID
+			   mobileno.classList.add('invalid');
+			   
+		    }else if(mobileNum.length<'10') {
+		    	document.getElementById('mobotpMsgBox').innerHTML="";
+		    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+				document.getElementById('mobileerrMsgBox').innerHTML="Mobile Number should be 10 digit";
+				document.getElementById('mobileNumber').value="";
+				document.getElementById('mobileNumber').focus;
+				document.getElementById('otpNumberSarathi').innerHTML="";
+				document.getElementById("otpNumberSarathi").disabled = true;
+				document.getElementById("verifySarathi").disabled = true;
+				document.getElementById("generateSarathiotp").disabled = true;//mobile id
+				mobileno.classList.add('invalid');
+				return false;
+			 }else if(mobileNum==0){
+				    document.getElementById('mobotpMsgBox').innerHTML="";
+					document.getElementById("mobilesuccMsgBox").innerHTML = "";
+					//mobileno.style.border = '1px solid #FF0000';
+					document.getElementById('mobileerrMsgBox').innerHTML="Please Enter Valid Mobile Number";
+					document.getElementById('mobileNumber').value="";
+					document.getElementById('mobileNumber').focus;
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("verifySarathi").disabled = true;
+					document.getElementById("generateSarathiotp").disabled = true;//mobile id
+					document.getElementById('otpNumberSarathi').innerHTML="";
+					mobileno.classList.add('invalid');
+					return false;
+			}else if(!regacc.test(mobileNum)){
+				document.getElementById('mobotpMsgBox').innerHTML="";
+				document.getElementById("mobilesuccMsgBox").innerHTML = "";
+				mobileno.style.border = '1px solid #FF0000';
+				document.getElementById("mobileerrMsgBox").innerHTML = "Please Enter Valid Mobile Number";
+				document.getElementById('mobileNumber').value="";
+				document.getElementById('mobileNumber').focus;
+				document.getElementById("otpNumberSarathi").disabled = true;
+				document.getElementById("verifySarathi").disabled = true;
+				document.getElementById("generateSarathiotp").disabled = true;//mobileID
+				document.getElementById('otpNumberSarathi').innerHTML="";
+				mobileno.classList.add('invalid');
+				return false;
+			}else{//otpNumberSarathi
+				document.getElementById('mobotpMsgBox').innerHTML="";
+				document.getElementById("mobileerrMsgBox").innerHTML = "";
+				document.getElementById('otpNumberSarathi').innerHTML="";
+				mobileno.classList.add('valid');
+				//document.getElementById("generateSarathiotp").disabled = false; //mobileId
+				return true;
+				}
+		}
+	 function validOTP(){
+			var otps=$("#otpcode").val();
+			 var otp= $("#otpNumberSarathi").val();
+			 var mobileNum=$("#mobileNumber").val();
+			 const mobileno = document.getElementById('mobileNumber');
+			 const otpsar = document.getElementById('otpNumberSarathi');
+			// regacc = /^[0]?[0-9]\d{9}$/ ;///^[A-Za-z0-9]+$/
+			 regacc = /^[0-9]+$/ ;
+			 if(mobileNum=='' ){
+					if(otp==''){ 
+						document.getElementById('mobileerrMsgBox').innerHTML="";
+						document.getElementById('mobotpMsgBox').innerHTML="Generate OTP first and try again ";
+						document.getElementById('otpNumberSarathi').value="";
+					    document.getElementById('mobileNumber').focus;
+					    document.getElementById("verifySarathi").disabled = true;
+					    document.getElementById("otpNumberSarathi").disabled = true;
+					    otpsar.classList.add('invalid');
+						return false;
+				}
+				 }else if(otp==''){
+				document.getElementById('mobileerrMsgBox').innerHTML="";
+				document.getElementById('mobotpMsgBox').innerHTML="Please enter OTP";
+			    document.getElementById('otpNumberSarathi').value="";
+			    document.getElementById('otpNumberSarathi').focus;
+			    document.getElementById("verifySarathi").disabled = true;
+			    otpsar.classList.add('invalid');
+				return false;
+				}else if(otp.length < '6'){
+					document.getElementById('mobileerrMsgBox').innerHTML="";
+					document.getElementById('mobotpMsgBox').innerHTML="OTP Length should be 6 digit";
+				    document.getElementById('otpNumberSarathi').value="";
+				    document.getElementById('otpNumberSarathi').focus;
+				    document.getElementById("verifySarathi").disabled = true;
+				    otpsar.classList.add('invalid');
+					return false;
+					}else if(!regacc.test(otp)){
+						document.getElementById('mobileerrMsgBox').innerHTML="";
+						document.getElementById('mobotpMsgBox').innerHTML="Please Enter Valid OTP";
+					    document.getElementById('otpNumberSarathi').value="";
+					    document.getElementById('otpNumberSarathi').focus;
+					    document.getElementById("verifySarathi").disabled = true;
+					    otpsar.classList.add('invalid');
+					}else if(otp==0){
+						document.getElementById('mobileerrMsgBox').innerHTML="";
+						document.getElementById('mobotpMsgBox').innerHTML="Please Enter Valid OTP";
+					    document.getElementById('otpNumberSarathi').value="";
+					    document.getElementById('otpNumberSarathi').focus;
+					    document.getElementById("verifySarathi").disabled = true;
+					    otpsar.classList.add('invalid');
+				}else{
+					//document.getElementById("verifySarathi").disabled = false;
+					document.getElementById('mobileerrMsgBox').innerHTML="";
+					document.getElementById('mobotpMsgBox').innerHTML="";
+					otpsar.classList.add('valid');
+					//otpsar.style.border = '1px #0000FF';//vvv
+				}
+
+			}
+	 
+	 function gensarathiOTP(){
+	        document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			document.getElementById("generateSarathiotp").disabled = true;	
+			document.getElementById("generateResendSarathiotp").disabled = false;	
+		    const mobileno = document.getElementById('mobileNumber');
+			const otpsar = document.getElementById('otpNumberSarathi');
+			var mobileNum=$("#mobileNumber").val();
+			var entcaptxt=$("#entcaptxt").val();
+			var checkBox = $("input[name=aadhaarHoldingType]:checked").val();
+			document.getElementById('otpCheckbox').checked=false;
+			    var maskedMobileRegex = /^\*{6}[0-9]{4}$/;
+			 	var mobRegex = /^[6-9]{1}[0-9]{9}$/;
+			   	if(mobileNum ===''){
+			   	 document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			   	document.getElementById('mobotpMsgBox').innerHTML="";
+				   document.getElementById('mobileerrMsgBox').innerHTML="Please Enter Mobile Number";
+				   document.getElementById('mobileNumber').value="";
+				   document.getElementById('otpNumberSarathi').innerHTML="";
+				   document.getElementById('mobileNumber').focus;
+				   document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("verifySarathi").disabled = true;
+					document.getElementById("generateSarathiotp").disabled = true;
+					mobileno.classList.add('invalid');
+			   	}else if(entcaptxt =='') {
+			    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			    	document.getElementById('mobotpMsgBox').innerHTML="";
+					document.getElementById('mobileerrMsgBox').innerHTML="Please Enter Captcha";
+					 changeCaptcha();
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("generateSarathiotp").disabled = false;	
+					document.getElementById("verifySarathi").disabled = true;
+					document.getElementById("generateResendSarathiotp").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+			    }else if(entcaptxt.length<'6') {
+			    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			    	document.getElementById('mobotpMsgBox').innerHTML="";
+					document.getElementById('mobileerrMsgBox').innerHTML="Captcha Length should be 6 digit";
+					document.getElementById('entcaptxt').value="";
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("generateSarathiotp").disabled = false;	
+					document.getElementById("verifySarathi").disabled = true;
+					document.getElementById("generateResendSarathiotp").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+			    }else if(mobileNum.length<'10') {
+			    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			    	document.getElementById('mobotpMsgBox').innerHTML="";
+					document.getElementById('mobileerrMsgBox').innerHTML="Mobile Number Length should be 10 digit";
+					document.getElementById('mobileNumber').value="";
+					document.getElementById('mobileNumber').focus;
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("verifySarathi").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+				 }else if(mobileNum==0){
+					 document.getElementById("mobilesuccMsgBox").innerHTML = "";
+					 document.getElementById('mobotpMsgBox').innerHTML="";
+					 document.getElementById('mobileerrMsgBox').innerHTML="Please Enter Valid Mobile Number";
+						document.getElementById('mobileNumber').value="";
+						document.getElementById('mobileNumber').focus;
+						document.getElementById("otpNumberSarathi").disabled = true;
+						document.getElementById("verifySarathi").disabled = true;
+						mobileno.classList.add('invalid');
+						return false;
+
+				}else if(!mobRegex.test(mobileNum) && !maskedMobileRegex.test(mobileNum)){
+					document.getElementById('mobotpMsgBox').innerHTML="";
+					 document.getElementById("mobilesuccMsgBox").innerHTML = "";
+					document.getElementById("mobileerrMsgBox").innerHTML = "Please Enter Valid Mobile Number";
+					document.getElementById('mobileNumber').value="";
+					document.getElementById('mobileNumber').focus;//otpNumberSarathi
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("verifySarathi").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+				}else{
+					
+				 $.ajax({
+				 type: "post",
+				 url: "getOtpFromSarathi.do",
+				 data: { 'mobileNumber': mobileNum, 'captcha': entcaptxt, 'checkBox': checkBox},
+				 async: false,
+				 cache: false,
+				 beforeSend: function() {
+					 $(".loader").show();
+			     },
+				 success: function (res) {
+					 if(res.startsWith('SS02')){
+						 $('#generateResendSarathiotp').show();
+						 $('#otpbox').show();
+					   	 changeCaptcha1();
+						 $('#captcha1box').show();
+						 $('#captchaBox').hide();
+						  res = res.substring(6);
+						  $('#otpcode').val(res);
+						document.getElementById("verifySarathi").style.display='';
+					   	document.getElementById("mobileerrMsgBox").innerHTML = "";
+					    document.getElementById('mobotpMsgBox').innerHTML="";
+					   	document.getElementById("mobilesuccMsgBox").innerHTML = res;
+					   	document.getElementById("mobileNumber").readOnly = true;
+					   	document.getElementById("otpNumberSarathi").disabled = false;
+					   	document.getElementById("generateSarathiotp").disabled = true;
+					   	$('#generateSarathiotp').hide();
+					   	//mobileno.classList.add('valid');
+					   	}else{
+					   		changeCaptcha();
+					   		document.getElementById("mobileerrMsgBox").innerHTML = "";
+						    document.getElementById('mobotpMsgBox').innerHTML="";
+						   	document.getElementById("mobilesuccMsgBox").innerHTML = res;
+						   	//document.getElementById("verifySarathi").disabled = false;
+						   	document.getElementById("otpNumberSarathi").disabled = false;
+						   	//document.getElementById("generateSarathiotp").disabled = false;
+						   	document.getElementById("generateResendSarathiotp").disabled = true;
+						   	document.getElementById('entcaptxt').value="";
+					   	}
+				 },
+				 complete: function(){
+			   	  $(window).on("load",function() {
+			   		    $(".loader").fadeOut();
+			   	  });
+			   	  $(".loader").hide();
+			     }
+				 });
+				 } //end else block
+				}
+	 function genResendsarathiOTP(){
+		 document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			document.getElementById("generateSarathiotp").disabled = true;	
+			document.getElementById("generateResendSarathiotp").disabled = false;
+		    const mobileno = document.getElementById('mobileNumber');
+			const otpsar = document.getElementById('otpNumberSarathi');
+			var checkBox = $("input[name=aadhaarHoldingType]:checked").val();
+			var mobileNum=$("#mobileNumber").val();
+			var entcaptxt=$("#entcaptxt1").val();
+ 			$("#verifySarathi").val();
+			document.getElementById('otpCheckbox').checked=false;
+			$("#otpCheckbox").hide();
+			$("#otpCheckboxSentence").hide();
+			    var maskedMobileRegex = /^\*{6}[0-9]{4}$/;
+			    var regacc = /^[6-9]{1}[0-9]{9}$/;
+			   	if(mobileNum ===''){
+			   	 document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			         document.getElementById('mobotpMsgBox').innerHTML="";
+				   document.getElementById('mobileerrMsgBox').innerHTML="Please Enter Mobile Number";
+				   $('#otpbox').hide();
+				   document.getElementById('mobileNumber').value="";
+				   document.getElementById('otpNumberSarathi').innerHTML="";
+				   document.getElementById('mobileNumber').focus;
+				   document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("verifySarathi").disabled = true;
+					document.getElementById("generateSarathiotp").disabled = true;
+					mobileno.classList.add('invalid');
+			    }else if(entcaptxt =='') {
+			    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			    	document.getElementById('mobotpMsgBox').innerHTML="";
+					document.getElementById('mobileerrMsgBox').innerHTML="Please Enter Captcha";
+					changeCaptcha1();
+					$('#otpbox').hide();
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("generateSarathiotp").disabled = false;	
+					document.getElementById("verifySarathi").disabled = true;
+					document.getElementById("generateSarathiotp").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+			    }else if(entcaptxt.length<'6') {
+			    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			    	document.getElementById('mobotpMsgBox').innerHTML="";
+					document.getElementById('mobileerrMsgBox').innerHTML="Captcha Length should be 6 digit";
+					$('#otpbox').hide();
+					document.getElementById('entcaptxt').value="";
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("generateSarathiotp").disabled = false;	
+					document.getElementById("verifySarathi").disabled = true;
+					document.getElementById("generateSarathiotp").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+			    }else if(mobileNum.length<'10') {
+			    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			    	document.getElementById('mobotpMsgBox').innerHTML="";
+					document.getElementById('mobileerrMsgBox').innerHTML="Mobile Number Length should be 10 digit";
+					$('#otpbox').hide();
+					document.getElementById('mobileNumber').value="";
+					document.getElementById('mobileNumber').focus;
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("verifySarathi").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+				 }else if(mobileNum==0){
+					 document.getElementById("mobilesuccMsgBox").innerHTML = "";
+					 document.getElementById('mobotpMsgBox').innerHTML="";
+					 document.getElementById('mobileerrMsgBox').innerHTML="Please Enter Valid Mobile Number";
+					 $('#otpbox').hide();
+						document.getElementById('mobileNumber').value="";
+						document.getElementById('mobileNumber').focus;
+						document.getElementById("otpNumberSarathi").disabled = true;
+						document.getElementById("verifySarathi").disabled = true;
+						mobileno.classList.add('invalid');
+						return false;
+
+				}else if(!regacc.test(mobileNum) && !maskedMobileRegex.test(mobileNum)){
+					document.getElementById('mobotpMsgBox').innerHTML="";
+					 document.getElementById("mobilesuccMsgBox").innerHTML = "";
+					document.getElementById("mobileerrMsgBox").innerHTML = "Please Enter Valid Mobile Number";
+					$('#otpbox').hide();						
+					document.getElementById('mobileNumber').value="";
+					document.getElementById('mobileNumber').focus;//otpNumberSarathi
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("verifySarathi").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+				}else{
+					
+				 $.ajax({
+				 type: "post",
+				 url: "getOtpFromSarathi.do",
+				 data: { 'mobileNumber': mobileNum, 'captcha': entcaptxt, 'checkBox': checkBox},
+				 async: false,
+				 cache: false,
+				 beforeSend: function() {
+					 $(".loader").show();
+			     },
+				 success: function (res) {
+				  if(res.startsWith('SS02')){
+					  changeCaptcha1();
+					  $('#otpbox').show();
+					  $('#captcha1box').show();
+					  $('#captchaBox').hide();
+					  res = res.substring(6);
+					  $('#otpcode').val(res);
+  					  $("#otpNumberSarathi").val('');
+					  $("#otpCheckbox").show();
+					  $("#otpCheckboxSentence").show();
+				   	document.getElementById("mobileerrMsgBox").innerHTML = "";
+				    document.getElementById('mobotpMsgBox').innerHTML="";
+				   	document.getElementById("mobilesuccMsgBox").innerHTML = res;
+				   	//document.getElementById("verifySarathi").disabled = false;
+				   	document.getElementById("otpNumberSarathi").disabled = false;
+				   	document.getElementById("generateSarathiotp").hide = true;
+				    $('#generateSarathiotp').hide();
+				   	//mobileno.classList.add('valid');
+				   	}else{
+						$('#otpbox').hide();
+				   		document.getElementById("mobileerrMsgBox").innerHTML = "";
+					    document.getElementById('mobotpMsgBox').innerHTML="";
+					   	document.getElementById("mobilesuccMsgBox").innerHTML = res;
+					   	//document.getElementById("verifySarathi").disabled = false;
+					   	document.getElementById("otpNumberSarathi").disabled = false;
+					   	document.getElementById("generateSarathiotp").disabled = true;
+					   	document.getElementById('entcaptxt1').value="";
+				   	}
+				 },
+				 complete: function(){
+			   	  $(window).on("load",function() {
+			   		    $(".loader").fadeOut();
+			   	  });
+			   	  $(".loader").hide();
+			     }
+				 });
+				 } //end else block
+				}
+		
+	 function verifiedBySarathi(){
+		 var otps=$("#otpcode").val();
+		 var entcaptxt=$("#entcaptxt1").val();
+		 var otp= $("#otpNumberSarathi").val();
+		 var mobileNum=$("#mobileNumber").val();
+		 const mobileno = document.getElementById('mobileNumber');
+		 var checkBox = $("input[name=aadhaarHoldingType]:checked").val();
+		 const otpsar = document.getElementById('otpNumberSarathi');
+		 regacc = /^[0-9]+$/ ;
+			const elems1 = document.querySelectorAll('#otpNumberSarathi');
+			for (var i = 0; i < elems1.length; i++) {                
+		        if (elems1[i].classList.contains("invalid")) {
+		          console.log(elems1[i].className);
+		          elems1[i].classList.remove('invalid');
+		          elems1[i].classList.remove('valid');
+		          console.log("Affter remove: "+elems1[i].className);
+		          }else{
+		        	  console.log("else: "+elems1[i].className);
+		        	  elems1[i].classList.remove('valid');
+		        	  elems1[i].classList.remove('invalid');
+		        	  console.log("After remove in else: "+elems1[i].className);
+			          }
+		          
+		        }
+		 if(mobileNum=='' ){
+				if(otp==''){
+					document.getElementById('mobileerrMsgBox').innerHTML="";
+					document.getElementById('mobotpMsgBox').innerHTML="Generate OTP first and try again ";
+					document.getElementById('otpNumberSarathi').value="";
+				    document.getElementById('mobileNumber').focus;
+				    document.getElementById("verifySarathi").disabled = true;
+				    document.getElementById("otpNumberSarathi").disabled = true;
+				    mobileno.classList.add('invalid');
+				    otpsar.classList.add('invalid');
+					return false;
+					}
+		 }else if(document.getElementById('otpCheckbox').checked == false) {
+		    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+		    	document.getElementById('mobotpMsgBox').innerHTML="";
+				document.getElementById('mobileerrMsgBox').innerHTML="Kindly Select The Check Box Before Proceeding.";
+				 changeCaptcha();
+				document.getElementById("otpNumberSarathi").disabled = true;
+				document.getElementById("generateSarathiotp").disabled = false;	
+				document.getElementById("verifySarathi").disabled = true;
+				document.getElementById("generateResendSarathiotp").disabled = true;
+				mobileno.classList.add('invalid');
+				return false;
+		    }else if(entcaptxt =='') {
+			    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			    	document.getElementById('mobotpMsgBox').innerHTML="";
+					document.getElementById('mobileerrMsgBox').innerHTML="Please Enter Captcha";
+					changeCaptcha1();
+					document.getElementById("otpNumberSarathi").disabled = false;
+					document.getElementById("verifySarathi").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+		}else if(entcaptxt.length<'6') {
+			    	document.getElementById("mobilesuccMsgBox").innerHTML = "";
+			    	document.getElementById('mobotpMsgBox').innerHTML="";
+					document.getElementById('mobileerrMsgBox').innerHTML="Captcha Length should be 6 digit";
+					document.getElementById('mobileNumber').value="";
+					document.getElementById('entcaptxt').value="";
+					document.getElementById('mobileNumber').focus;
+					document.getElementById("otpNumberSarathi").disabled = true;
+					document.getElementById("verifySarathi").disabled = true;
+					mobileno.classList.add('invalid');
+					return false;
+		}else if(otp==''){ 
+						document.getElementById('mobileerrMsgBox').innerHTML="";
+						document.getElementById('mobotpMsgBox').innerHTML="Please Enter OTP";
+						document.getElementById('otpNumberSarathi').value="";
+					    document.getElementById('mobileNumber').focus;
+					    document.getElementById("verifySarathi").disabled = true;
+					    mobileno.classList.add('invalid');
+					    otpsar.classList.add('invalid');
+						return false;
+			}else if(otp !=''){
+		 $.ajax({//vvv2
+		 type: "post",
+		 url: "getOtpAuthenticationWithSarathi.do",
+		 data: { 'otpcode': otps, 'otpNumberSarathi': otp, 'mobileNumber': mobileNum, 'captcha': entcaptxt, 'checkBox': checkBox},
+		 cache : false,
+		 beforeSend: function() {
+			 $(".loader").show();
+	     },
+		 success: function (res1) {
+		 if(res1 =='OTP authenticated successfully.'){
+		 document.ekycformDisplay.action="eKycOTPAuth.do";
+		// document.ekycform.action="photoCaptureForm.do";
+		 ekycformDisplay.submit();
+		 }else if(res1.startsWith('SS14')){
+			 changeCaptcha1();
+			  res1 = res1.substring(5);
+			  document.getElementById('mobileerrMsgBox').innerHTML=res1;
+			  document.getElementById('otpNumberSarathi').value="";
+			  document.getElementById('otpNumberSarathi').disabled = true;
+			  $('#otpbox').hide();
+			  document.getElementById("verifySarathi").disabled = true;
+			  document.getElementById("otpNumberSarathi").disabled = true;	
+			  otpsar.classList.add('invalid');
+			  return false;
+		 } else if(res1.startsWith('SS15')){
+			      changeCaptcha1();
+				  res1 = res1.substring(5);
+				  document.getElementById('mobileerrMsgBox').innerHTML=res1;
+				  document.getElementById('entcaptxt1').value="";
+				  document.getElementById("verifySarathi").disabled = true;
+				  otpsar.classList.add('invalid');
+				  return false;
+		} else{
+		  changeCaptcha1();
+		  document.getElementById('mobileerrMsgBox').innerHTML=res1;
+		  document.getElementById('otpNumberSarathi').value="";
+		  document.getElementById('otpNumberSarathi').focus;
+		  document.getElementById("verifySarathi").disabled = true;
+		  otpsar.classList.add('invalid');
+		 // otpsar.style.border = '1px solid #FF0000';
+		  return false;
+		 }
+		 },
+		 complete: function(){
+		   	  $(window).on("load",function() {
+		   		    $(".loader").fadeOut();
+		   	  });
+		   	  $(".loader").hide();
+		     },
+		 error: function(jqXHR, textStatus, errorThrown) {
+		 console.log('jqXHR:');
+		 console.log(jqXHR);
+		 console.log('textStatus:');
+		 console.log(textStatus);
+		 console.log('errorThrown:');
+		 console.log(errorThrown);
+		 //document.getElementById('mobotpMsgBox').innerHTML="Sorry! Non E-kYC not working at this moment! please try again";
+		 return false;
+		 }
+		 });
+		}else if(otp.length < '6'){
+			document.getElementById('mobileerrMsgBox').innerHTML="";
+			document.getElementById('mobotpMsgBox').innerHTML="OTP Length should be 6 digit";
+		    document.getElementById('otpNumberSarathi').value="";
+		    document.getElementById('otpNumberSarathi').focus;
+		    document.getElementById("verifySarathi").disabled = true;
+		    otpsar.classList.add('invalid');
+		    //otpsar.style.border = '1px solid #FF0000';
+			return false;
+			}else if(!regacc.test(otp)){
+				document.getElementById('mobileerrMsgBox').innerHTML="";
+				document.getElementById('mobotpMsgBox').innerHTML="Please Enter Valid OTP";
+			    document.getElementById('otpNumberSarathi').value="";
+			    document.getElementById('otpNumberSarathi').focus;
+			    document.getElementById("verifySarathi").disabled = true;
+			    otpsar.classList.add('invalid');
+			}else if(otp==0){
+				document.getElementById('mobileerrMsgBox').innerHTML="";
+				document.getElementById('mobotpMsgBox').innerHTML="Please Enter Valid OTP";
+			    document.getElementById('otpNumberSarathi').value="";
+			    document.getElementById('otpNumberSarathi').focus;
+			    document.getElementById("verifySarathi").disabled = true;
+			    otpsar.classList.add('invalid');
+			}else{
+			document.getElementById('mobotpMsgBox').innerHTML="Please enter OTP";
+		    document.getElementById('otpNumberSarathi').value="";
+		    document.getElementById('otpNumberSarathi').focus;
+		    document.getElementById("verifySarathi").disabled = true;
+		    otpsar.classList.add('invalid');
+		   // otpsar.style.border = '1px solid #FF0000';
+			return false;
+		}
+		}
+
+async function getAuthenticate(){
+	 if(document.getElementById("checkMe").checked==true && document.getElementById("checkMe1").checked==true && document.getElementById("checkMe2").checked==true){
+     var data_aadhaar=$("#aadharNumber").val();
+	 if(data_aadhaar==""||data_aadhaar==null){
+			alert("Please Enter your AadharNumber/VID");
+		 	return false;
+	 }
+	 var otp = $("#otpNumber").val();
+	 if(otp.length!=6)
+	 {
+		 	alert("Invalid OTP");
+		 	return false;
+	 }
+	 const base64Key = $("#eadhar").val();;
+	 const enc_sal_Aa = await aadhaarEncryption(data_aadhaar, base64Key);
+	 console.log("enc_sal_Aa1=" + enc_sal_Aa);
+	 //var eOtp=base64_encode(otp);
+	 //var position = 6;
+	 //var enc_sal_O = [eOtp.slice(0, position), sal_enc, eOtp.slice(position)].join('');
+	 var rto=$("#rtoSelected").val();
+	 $(".loader").show();
+	 $.ajax({
+	 type: "post",
+	 url: "ekycAppicantDetails.do",
+     data:{'aadharNumber':enc_sal_Aa,'otpNumber':otp,'reqId':document.getElementById("reqId").value},
+	 cache : false,
+	 beforeSend: function() {
+		 $(".loader").show();
+     },
+	 success: function (res1) {
+		 var action=""; 
+		 
+		 var res12=res1[39]!=null?res1[39]:"";
+		
+		 if(res1[36]=="y"){
+				 
+			 document.getElementById("userConfirm").value='y';
+		 }
+		 if(res1[37]=="notMatched"){
+			
+			alert("Name in Aadhaar is not Matching with Name in Licence.");
+			window.location.href='ekycForm.do';
+ 		 	return false;
+			 
+			 }
+		    if(res1==null){    		    	  	      
+		 		alert('Please enter your Aadhar/VID'); 
+		 		return false;
+		 	 }
+	      if(res1==''){    		    	  	      
+	 		
+	 		 alert('No data Received From Aadhar. Please try after sometime OR use alternate mode of authentication.');	   	 		
+		      
+	 		window.location.href='sarathiHomePublic.do';
+	 	 }
+	      if (res1[0]==("userRegFailed")){
+	    	  alert('UserRegFailed From UIDAI'); 
+	    	  document.ekycformDisplay.action="eKycOTPAuthFail.do";
+	    	  ekycformDisplay.submit();
+	  		 return false;
+	      }
+	    if(res1.length != 40) 
+	    {
+	    	
+	    	
+	    	if (res1[0].includes("400")){
+	    		
+		 		 alert(res1[1]); 
+		 	     window.location.href='ekycForm.do';
+		 		 return false;
+		 	 }
+	    	 if (res1[0].includes("1201")){
+		 		 alert(res1[1]); 
+		 	     window.location.href='ekycForm.do';
+		 		 return false;
+		 	 }
+	    	 if (res1[0].includes("403")){
+		 		 alert(res1[1]); 
+		 	     window.location.href='ekycForm.do';
+		 		 return false;
+		 	 }
+	    	 if (res1[0].includes("1201")){
+		 		 alert(res1[1]); 
+		 	     window.location.href='ekycForm.do';
+		 		 return false;
+		 	 }
+	    	
+	    	if (res1.includes("00")||(res1[1]=='N')||res1.includes("01")||res1.includes("02")||res1.includes("03")||res1.includes("04")){
+		 		 alert('Authentication Failed'); 
+		 		window.location.href='sarathiHomePublic.do';
+		 		 return false;
+		 	 }
+	     }
+	      if (res1[0].includes("noRE")){
+	    	  alert(res1[1]); 	
+		 	   window.location.href='sarathiHomePublic.do';
+		 		 return false;
+		 	 }
+	      if (res1[0].includes("008")){
+		 		 alert('You are not a resident of Delhi as per Aadhaar Record. In case you have shifted your residence, please update your address in Aadhaar  at any Aadhaar centre and only  after updation of  Aadhaar  apply for this service.'); 
+		 		//alert(res1[1]);
+		 	   window.location.href='ekycForm.do';
+		 		 return false;
+		 	 }
+	      if (res1[0].includes("mb_error")){
+		 		 alert(res1[1]); 
+		 	   window.location.href='ekycForm.do';
+		 		 return false;
+		 	 }
+	 	 if (res1[0].includes("05")){
+	 		 alert('Name as per Adhaar records is not Matching . Please use alternate method for Authentication'); 
+	 		//alert("FirstName "+res1[1]+"MiddleName "+res1[2]+"LastName "+res1[3])
+	 		
+	 		 window.location.href='ekycForm.do';
+	 		return false;
+	 	 }
+	 	if (res1[0].includes("06")){
+	 		 alert('Relative Name as per Adhaar records is not Matching. Please use alternate method for Authentication'); 
+		 	 //alert("FirstName "+res1[1]+"MiddleName "+res1[2]+"LastName "+res1[3])
+	 		 window.location.href='ekycForm.do';
+	 		return false;
+	 	 }
+	 	if (res1[0].includes("07")){
+	 		 alert('Relative Name not Found in Aadhar Data.Please use alternate method of Authentication'); 
+		 	 //alert("FirstName "+res1[1]+"MiddleName "+res1[2]+"LastName "+res1[3])
+	 		 window.location.href='ekycForm.do';
+	 		return false;
+	 	 }
+	 	if (res1[0].includes("08")){
+	 		 alert('eKYC Data not accessible from Aadhaar. Please try again'); 
+		 	 //alert("FirstName "+res1[1]+"MiddleName "+res1[2]+"LastName "+res1[3])
+	 		 window.location.href='ekycForm.do';
+	 		return false;
+	 	 }
+	 	if (res1[0].includes("16")){
+	 		 alert(res1[1]); 
+	 	   window.location.href='sarathiHomePublic.do';
+	 		 return false;
+	 	 }
+	 	  if(res1[25]==null){
+      	   //alert(res1[1]);
+	 		alert('District Name Not Matched '); 
+	 		window.location.href='sarathiHomePublic.do';
+	 		 return false;
+	 	 } 
+	// if (!(res1.includes("00")||res1.includes("01")||res1.includes("02")||res1.includes("03")||res1.includes("04"))){
+		 if(res1.length == 40) 
+		    {
+		 
+	 document.getElementById("newFullName").textContent=res1[0]!=null?res1[0]:"";	 
+     document.getElementById("dateOfBirth").textContent=res1[1]!=null?res1[1]:"";	 
+     document.getElementById("gender").textContent=res1[3]!=null?(res1[3]== 1?"Male":(res1[3]== 2?"Female":(res1[3]== 3?"Transgender":"Not Specified"))):"";	
+  	 document.getElementById('imgDisplay').src="data:image/JPEG;base64,"+res1[6]    	 
+	 document.getElementById("relationName").textContent=res1[7]!=null?res1[7]:""
+	   var stateCode=res1[12];//added by bina
+	   var rel= res1[0];
+			 
+	   if(stateCode != "Andhra Pradesh")
+		   {
+			   if(rel.length>40){     	 
+		   	    var r = confirm("Your Name Length is More than 40 Characters and Cannot be Adjusted as per SCOSTA (Smartcard Specifications). Please use Alternate Method of Authentication ( Mobile No /Without Aadhaar).  OR  If You proceed with Aadhaar ekyc FIRST 40 Characters of Name will be used.Press <OK> to proceed or  <CANCEL>  to use Alternate Method.");
+		   	   if (r == true) { 
+		   		 //var rel= res1[0];
+		   		 //alert(rel.length);   	 
+		   		 } else {res1=[]; 	    	
+		 	    	$('#ekycFormPageId3').hide();
+		 	    	$('#ekycFormPageId2').hide();
+		 	    	 window.location.href='ekycForm.do';
+		 	    }
+		       }  	  
+		   }	 
+	 document.getElementById("villOrTown").textContent=res1[9]!=null?res1[9]:""	 
+	 document.getElementById("dist").textContent=res1[5]!=null?res1[5]:""	 
+	 document.getElementById("pc").textContent=res1[10]!=null?res1[10]:""
+	 /* document.getElementById("state").value=res1[3]!=null? */
+	 document.getElementById('applicantPhoto').value=res1[6]     	  
+	 document.getElementById('txn').value=res1[11]!=null?res1[11]:""    //txn 	 
+	 document.getElementById('location').textContent=res1[15]!=null?res1[15]:""     
+	 document.getElementById('relation').textContent=res1[14]!=null?res1[14]:""   //relationType
+	 document.getElementById('state').textContent=res1[12]!=null?res1[12]:""    
+	 document.getElementById('country').textContent=res1[13]!=null?res1[13]:"" 	 
+	 document.getElementById('house').textContent=res1[16]!=null?res1[16]:""    
+	 document.getElementById('street').textContent=res1[17]!=null?res1[17]:""    
+	 document.getElementById('lm').textContent=res1[18]!=null?res1[18]:""   
+	 document.getElementById('po').textContent=res1[19]!=null?res1[19]:""   	 
+	 document.getElementById('subdist').textContent=res1[20]!=null?res1[20]:""
+			 
+			 //added by bina on 05-11-2022
+	document.getElementById('stateCode').value=res1[24]!=null?res1[24]:""
+	document.getElementById('distCode').value=res1[25]!=null?res1[25]:""
+			
+		document.getElementById('changeofNameService').value=res1[36]!=null?res1[36]:""
+		document.getElementById('changeOfDobService').value=res1[38]!=null?res1[38]:""
+		document.getElementById('nameDobFlag').value=res1[37]!=null?res1[37]:""
+
+	 /* $('#ekycFormPageId2').hide(); //15-10-2020 */
+	 	/*  if (!(res1.includes("00")))  */	
+	  if(res1==''){
+		  $('#ekycFormPageId3').hide()
+	  }else{
+		  $('#ekycFormPageId3').show()
+	  }
+	 //$('#ekycFormPageId3').show();//15-10-2020 verify
+	 $('#verify').hide();//15-10-2020 verify
+	  $('#ekycFormPageId2').hide();
+	  $('#ekycFormPageId4').hide();
+	  }
+	 
+     //document.getElementById("gender").value=res1[4]; 	
+
+     /*document.getElementById('aadhaarMsgBox').innerHTML=""; */
+	 //document.getElementById("gender").value=res1[4];	
+	 // document.getElementById("mobileNumber").value=res1[2];
+	 // document.getElementById("licenceFromState").value=res1[3];
+	 //document.getElementById("email").value=res1[5];
+	 // document.getElementById("district").value=res1[6];
+  	//document.getElementById('applicantPhoto').value=res1[7];     	    	    	 
+
+
+
+	 /* document.ekycform.action=""+action;
+	 ekycform.submit(); */
+	 },error: function(jqXHR, textStatus, errorThrown) {
+	 console.log('jqXHR:');
+	 console.log(jqXHR);
+	 console.log('textStatus:');
+	 console.log(textStatus);
+	 console.log('errorThrown:');
+	 console.log(errorThrown);
+	 },
+	
+	 complete: function(){
+   	  $(window).on("load",function() {
+		    $(".loader").fadeOut();
+	  });
+	  $(".loader").hide();
+		}
+		
+	 }); 
+	 }else{
+	// alert("Please check on ''I here by state that i have no objection in Authenticating myself with Aadhaar Based Authentication System..''")
+	 alert("Please select all check boxes to authenticate")
+
+	 }
+	 } 
+	 function enableObjChk(){
+	 if($("#otpNumber").val()==""){
+	 document.getElementById('msgBox').innerHTML="";
+	 /* document.getElementById("h4id").style.color="lightgray"; */
+	 /* document.getElementById("checkMe").disabled = true; */
+	 document.getElementById("verify").disabled = true;
+
+	 //alert("please enter OTP number"); commented on 26-10-2020
+	 }else{
+	 /* document.getElementById("h4id").style.color="blue"; */  
+	/*  document.getElementById("checkMe").disabled = false; */
+	 document.getElementById("verify").disabled = false;
+
+	 }
+	 }
+	
+	 function enableFun(){
+	 //document.getElementById("verify").disabled="false";
+	 $("verify").prop("disabled",false);
+	 }
+	 function disableBtn() {
+			document.getElementById("aadharNumber").disabled = false;
+			if($("input[name=authenticateWithType]:checked").val() == 'A'){
+				document.getElementById("aadharNumber").setAttribute("maxlength", "12");	
+				}else {
+					document.getElementById("aadharNumber").setAttribute("maxlength", "16");	
+
+				}		
+	 }
+
+/* 	function undisableBtn() {
+		var aadhar=document.aadharNumber.name.value;
+		var otp=document.otpNumber.name.value;
+
+		if (document.getElementById("checkMe").checked == true && aadhar!=null && otp!=null){
+			document.getElementById("verify").disabled = false;
+		} else {
+			document.getElementById("verify").disabled = true;
+		}
+	} */
+	
+	function undisableBtn() {		
+		if (document.getElementById("checkMe").checked == true && document.getElementById("checkMe1").checked == true && document.getElementById("checkMe2").checked == true){
+			document.getElementById("verify").disabled = false;
+		} else {
+			document.getElementById("verify").disabled = true;
+		}
+	}
+	
+	function pageRedirect() {
+		 $(window).on("load",function() {
+ 		    $(".loader").fadeOut();
+ 	  		});
+		
+		if ($("input[name=aadhaarHoldingType]:checked").val() == undefined) {
+			alert("please select the radio button, if you 'have' / 'have not' Aadhar number");
+			//alert("please select the radio button");
+			 $(".loader").hide();
+			return false;
+		}else if ($("input[name=aadhaarHoldingType]:checked").val() == '1') {
+			  //$("#ekycFormPageId input[type=text]").val('');
+			 $("#authentiateWithSarathi input[type=text]").val('');
+			 // $("#rtoSelected select option:eq(0)").attr("selected", "selected"); 
+			$('#ekycFormPageId').show();
+			$('#ekycFormPageId2').show();
+			$('#buttons').hide();
+			 $(".loader").hide();
+			 alert("If your MOBILE NUMBER  has been changed, please get the new MOBILE NUMBER linked/updated  with your Aadhaar record");
+/* 			 if(stFrmHome.value=='Delhi')
+			 alert("Applicants with aadhar number can take their test from their residence, without visiting MLO office but without aadhar can apply on-line but they will have to visit the MLO office for appearing in LL test on due date of the appointment.");
+			 */
+			
+		} else if ($("input[name=aadhaarHoldingType]:checked").val() == '0') {
+
+			//alert(msg.value);
+			var mob_nur=document.getElementById("mobileNumber").value;
+			if(mob_nur ===null || mob_nur===undefined ||mob_nur===""){
+				document.getElementById("mobileNumber").disabled = false;
+
+			}else{
+				//document.getElementById("mobileNumber").disabled = true;
+			}
+			
+			$('#authentiateWithSarathi').show(); 
+			$(".loader").hide();
+/* 			 if(stFrmHome.value=='Delhi')
+				 alert("Applicants with aadhar number can take their test from their residence, without visiting MLO office but without aadhar can apply on-line but they will have to visit the MLO office for appearing in LL test on due date of the appointment.");
+ */
+
+
+		} else if ($("input[name=aadhaarHoldingType]:checked").val() == '2') {
+
+			//alert(msg.value);
+			var mob_nur=document.getElementById("mobileNumber").value;
+			if(mob_nur ===null || mob_nur===undefined ||mob_nur===""){
+				document.getElementById("mobileNumber").disabled = false;
+
+			}else{
+				//document.getElementById("mobileNumber").disabled = true;
+			}
+			
+			$('#authentiateWithSarathi').show(); 
+			$(".loader").hide();
+/* 			 if(stFrmHome.value=='Delhi')
+				 alert("Applicants with aadhar number can take their test from their residence, without visiting MLO office but without aadhar can apply on-line but they will have to visit the MLO office for appearing in LL test on due date of the appointment.");
+ */
+
+
+		}
+
+	}
+
+	  function onRtoSelection() {
+		$('#ekycFormPageId2').show();
+		/* $('#ekycFormPageId3').show();  shiv 15-10-2020*/
+
+	}  
+	$(window).on("load",function() {
+	    $(".loader").fadeOut();
+	});
+	
+	/* below code is disable inspect emlement */
+	document.onkeydown = function(e) {
+	if(e.keyCode == 123) {
+	return false;
+	}
+	if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+	return false;
+	}
+	if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+	     return false;
+    }
+	if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+	return false;
+	}
+	if(e.ctrlKey && e.shiftKey && e.keyCode == 'K'.charCodeAt(0)){
+	return false;
+	}
+	if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+	return false;
+	}
+	}
+	
+	function lOCALeKYC() {
+		window.location = "localEkyc.do";
+	} 
+	
+	 function changeCaptcha(){
+			$("#capimg").attr("src", "jsp/common/captchaimage.jsp?"+(new Date().getTime()));
+			$("#entcaptxt").val('');
+	}
+	 
+	 function changeCaptcha1(){
+			$("#capimg1").attr("src", "jsp/common/captchaimage.jsp?"+(new Date().getTime()));
+			$("#entcaptxt1").val('');
+	}
+/* End of code -veeresh */
+
+
+</script>
+<!-- Start of code - veeresh -->
+<style type="text/css">
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    /* background: url('images/enforceLoading.gif') 50% 50% no-repeat rgb(249,249,249); */
+    /* background: url('images/uploading.gif') 50% 50% no-repeat rgb(249,249,249); */
+    background: url('images/loading83.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+</style>
+<!-- Start of code - veeresh -->
+
+
+<div class="loader" style="display: none;"></div>
+	<div class="width100p padding0px">
+		<div class="panel panel-primary">
+	<!-- 	<h3 class="width50p panel-title">Authentication With E-KYC</h3> -->
+			<div class="panel-heading" style="display: flex; justify-content: space-between; align-items: flex-start;">
+				<h3 class="width50p panel-title" style="margin: 0;">
+					Authentication <span id="Ekyc" style=""> <span class="width50p panel-title">With E-kyc</span>
+					</span> <span id="Non-Ekyc" style="display: none;"> <span class="width50p panel-title">With Non E-kyc</span>
+					</span>  <span id="Non-EkycM" style="display: none;"> <span class="width50p panel-title">With Non E-kyc (MNVS)</span>
+					</span> 
+				</h3>
+				
+				<h2 class="width50p panel-title" style="margin: 0; text-align: right;">
+					FILL APPLICATION DETAILS LL
+				</h2>
+			</div>
+			<form id="ekycForm" name="ekycform" action="/sarathiservice/ekycForm.do" method="post">
+
+			<input type="hidden" name="eadhar" id="eadhar" autocomplete="off" class="bhashini-skip-translation">
+			<input type="hidden" name="eauthnticType" id="eauthnticType" autocomplete="off" class="bhashini-skip-translation">
+			<input type="hidden" name="msg" id="msg" autocomplete="off" class="bhashini-skip-translation">
+			<input type="hidden" name="note3" id="note3" autocomplete="off" class="bhashini-skip-translation">
+			<input type="hidden" name="llexamWithAadhar" id="llexamWithAadhar" autocomplete="off" class="bhashini-skip-translation">
+			<input type="hidden" name="teluguConsent" id="teluguConsent" autocomplete="off" class="bhashini-skip-translation">
+
+			
+
+
+				<div class="panel-body">
+					<div id="ekycFormPageId4" class="row">
+
+						<div class="col-md-12 top-space" id="instructions" style="color: #0000FF; margin-left:10%; width:auto;">
+
+							<div id="h4data" style="font-style: bold; font-size: medium; display: block;">
+					       <ul><li>Applicants can take the LL Test from their home or any preferred location, no need to visit RTO.</li><li>Password for Online LL Test will be sent as SMS to the registered mobile number linked with Aadhaar.</li><li>Successful applicant can download his/her Learner License.</li></ul></div>
+
+<!-- 						<div id="iid" style="font-style: bold; font-size: medium;"> -->
+<!-- 						</div> -->
+
+							<div id="note" style="font-style: bold; font-size: medium;">	
+						   </div>
+							
+						</div>
+
+						<div id="radiobuttons" class="col-md-12 ">
+
+
+							<!-- Start of code -veeresh -->
+						
+
+						
+						<div class="col-md-6 text-center top-space">
+							<input type="radio" name="aadhaarHoldingType" id="aadhaarHoldingType1" onclick="adharHoldTypeFun()" autocomplete="off" class="bhashini-skip-translation"><label for="aadhaarHoldingType1"></label>
+
+							<label class="control-label labeled">Submit via Aadhaar Authentication</label>
+						</div>
+
+						<div class="col-md-6 text-center top-space">
+							<input type="radio" name="aadhaarHoldingType" id="aadhaarHoldingType0" onclick="adharHoldTypeFun()" autocomplete="off" class="bhashini-skip-translation"><label for="aadhaarHoldingType0"></label>
+
+							<label class="control-label labeled">Submit Using Sarathi Mobile Authentication</label>
+						</div>
+						
+							<div class="col-md-6 text-center top-space"></div>
+							<div class="col-md-6 text-center top-space"></div>
+				
+							<div class="col-md-12 top-space" id="buttons" style="display: none;">
+							<br><br>
+								<div class="col-md-5"></div>
+								<div class="col-md-3">
+									<div class="col-md-5" style="margin-bottom: 5px;">
+										<input type="button" value="Submit" class="btn" name="submt" id="submt" onclick="pageRedirect()" autocomplete="off">
+									</div>
+									<div class="col-md-2">
+										<input type="button" value="Home" class="btn" onclick="window.location.href='sarathiHomePublic.do'" autocomplete="off">											
+									</div>
+								</div>
+								<div class="col-md-3 top-space"></div>
+
+							</div>
+						</div>
+
+						<!-- ---------------------------------------- after click on hold Aadhar / doesnt hold aadhar------------------ -->
+						<div class="col-md-6 text-center top-space"></div>
+
+						<div id="ekycFormPageId" style="">
+							<div class="col-md-12 top-space"></div>
+							<div class="col-md-12 top-space"></div>
+							<div class="col-md-12 top-space"></div>
+							<div class="col-md-12 top-space">
+								<div class="col-md-2"></div>
+								<div class="col-md-2 text-center top-space" style="margin-right: 10px;">
+									<span class="red bold">*</span>
+									<label id="ekycForm_label_enterotp">State</label>&nbsp;&nbsp;&nbsp;&nbsp;
+								</div>
+								<div class="col-md-2 top-space">
+									<div class="input-group">
+										<input type="text" name="stFrmHome" disabled="disabled" id="stFrmHome" class="form-control input-sm addhar_color bhashini-skip-translation" autocomplete="off">
+									
+									
+									</div>
+								</div>
+													
+														</div>
+														</div>
+								
+						      
+							<div class="col-md-12 top-space"></div>
+							<div class="col-md-12 top-space"></div>
+							<div class="col-md-12 top-space"></div>
+
+
+							<div id="ekycFormPageId2" style="">
+								<fieldset class="scheduler-border col-md-12">
+
+									<div class="col-md-12 top-space">
+										<div class="col-md-2"></div>
+										<div class="col-md-2"></div>
+										<div class="col-md-2  top-space">
+											<input type="radio" name="authenticateWithType" id="authenticateWithTypeA" onclick="disableBtn()" autocomplete="off" class="bhashini-skip-translation"><label for="authenticateWithTypeA"></label>
+
+											<label class="control-label labeled">Aadhaar number</label>&nbsp;&nbsp;&nbsp;&nbsp;
+										</div>
+										<div class="col-md-2 top-space">
+
+											<input type="radio" name="authenticateWithType" id="authenticateWithTypeV" onclick="disableBtn()" autocomplete="off" class="bhashini-skip-translation"><label for="authenticateWithTypeV"></label>
+
+											<label class="control-label labeled">Virtual ID</label>
+										</div>
+									</div> 
+
+									<div class="col-md-12 top-space" style="margin-top: 25px; margin-right: 10px;">
+										<div class="col-md-3"></div>
+										<div class="col-md-3 text-right top-space mb_textcenter">
+											<span class="red bold">*</span>
+											<label id="ekycForm_label_aadharorvirtual">Aadhaar Number or Virtual ID</label>&nbsp;&nbsp;&nbsp;&nbsp;
+											
+										</div>
+										<div class="col-md-2">
+																							
+												<input type="password" name="aadharNumber" maxlength="12" disabled="disabled" id="aadharNumber" class="form-control input-sm addhar_color bhashini-skip-translation" title="Enter Aadhaar Number or Virtual Id" onkeypress="return isNumCheck1(event);" onkeyup="EnableDisable(this)" oncopy="return false;" onpaste="return false;" autocomplete="off" ondrop="return false;" placeholder="Enter Aadhaar Number or Virtual Id">	
+											<!-- maxlength changed from 16 to 12 by hari -->
+											<input type="hidden" name="aadharNoVal" id="ekycForm_aadharNoVal" autocomplete="off" class="bhashini-skip-translation">
+											<input type="hidden" name="thumbMin" id="thumbMin" autocomplete="off" class="bhashini-skip-translation">
+											<input type="hidden" name="otpCount" id="otpCount" autocomplete="off" class="bhashini-skip-translation">
+
+											<input type="hidden" name="subdist" id="subdist" autocomplete="off" class="bhashini-skip-translation">
+											
+											
+
+
+											
+
+
+
+											
+												
+                                            
+																						
+											
+																					
+																					
+										</div>
+										
+										<div class="col-md-4">
+											<div id="generateotpdiv">
+												<button id="generateotp" class="btn btn-sm" value="Generate OTP" disabled="%{isReadonlyFlag()}" onclick="checkAadharExistence(); return false;">Generate OTP</button>
+											</div>
+										</div>
+									
+	                               </div> 
+									<div class="col-md-12 top-space" align="center" id="msgBox" style="color: #0000FF"></div>
+									 <div class="col-md-12 top-space" align="center" id="aadhaarMsgBox" style="color: #FF0000"></div> 
+
+								 <div class="col-md-12 top-space">
+										<div class="col-md-4"></div>
+										<div class="col-md-2 text-right mb_textcenter top-space" style="padding-top: 8px;">
+											<label id="ekycForm_label_enterotp">Enter OTP Here</label>&nbsp;&nbsp;&nbsp;&nbsp;
+										</div>
+										<div class="col-md-2 top-space">
+											<!-- <div class="input-group"> -->
+												<input type="text" name="otpNumber" maxlength="6" disabled="disabled" id="otpNumber" class="form-control input-sm addhar_color bhashini-skip-translation" title="Enter OTP Here" onblur="enableObjChk()" onkeypress="return isNumCheck(event);" onkeyup="EnableDisableOtp( )" oncopy="return false" onpaste="return false" autocomplete="off" placeholder="Enter OTP Here">													
+
+													
+											<!-- </div> -->
+											<!-- /input-group -->
+										</div>
+										<!-- /.col-lg-4 -->
+									</div> 
+									<!-- /.row -->
+
+									 <div class="col-md-12 top-space" style="color: #0000FF">
+									  <div class="col-md-3"></div>
+										<div class="col-md-1 top-space text-right" style="margin-top: 10px;">
+											
+										</div>
+										<div class="col-md-8 ">
+												<h4 id="h4id" style="color: red; font-size: large;">Aadhaar holder should have registered mobile number updated against their Aadhaar</h4>
+													
+											</div>
+										<div class="col-md-3"></div>
+										<div class="col-md-1 top-space text-right" style="margin-top: 10px;">
+											<input type="checkbox" name="checkMe" id="checkMe" onclick="undisableBtn()" autocomplete="off" class="bhashini-skip-translation"><input type="hidden" id="__checkbox_checkMe" name="__checkbox_checkMe" autocomplete="off" class="bhashini-skip-translation">
+										</div>
+										<div class="col-md-8 ">
+												<h4 id="h4id" style="font-style: italic; font-size: small;">I
+													hereby state that I have no objection in authenticating
+													myself with Aadhaar based authentication system and give my
+													consent to providing my Aadhaar number, Biometric and/ or
+													One Time Pin (OTP) data for Aadhaar based authentication/
+													eKYC for the purpose of availing of the Driving Licence
+													related Service provided by the concerned Transport
+													Department myself with Aadhaar Based Authentication
+													System..</h4>
+													<h4 id="tel1" style="font-style: italic; font-size: small;display: none">à°†à°§à°¾à°°à± à°†à°§à°¾à°°à°¿à°¤ à°ªà±à°°à°®à°¾à°£à±€à°•à°°à°£ à°µà±à°¯à°µà°¸à±à°¥à°¤à±‹ à°¨à°¨à±à°¨à± à°¨à±‡à°¨à± à°§à±ƒà°µà±€à°•à°°à°¿à°‚à°šà°¡à°‚à°²à±‹ à°¨à°¾à°•à± à°Žà°²à°¾à°‚à°Ÿà°¿ à°…à°­à±à°¯à°‚à°¤à°°à°‚ à°²à±‡à°¦à°¨à°¿ à°®à°°à°¿à°¯à± à°†à°§à°¾à°°à± à°†à°§à°¾à°°à°¿à°¤ à°ªà±à°°à°¾à°®à°¾à°£à±€à°•à°°à°£/ eKYC à°•à±Šà°°à°•à± à°¨à°¾ à°†à°§à°¾à°°à± à°¨à°‚à°¬à°°à±, à°¬à°¯à±‹à°®à±†à°Ÿà±à°°à°¿à°•à± à°®à°°à°¿à°¯à±/ à°²à±‡à°¦à°¾ à°µà°¨à± à°Ÿà±ˆà°®à± à°ªà°¿à°¨à± (OTP) à°¡à±‡à°Ÿà°¾à°¨à± à°…à°‚à°¦à°¿à°‚à°šà°¡à°¾à°¨à°¿à°•à°¿ à°¨à°¾ à°¸à°®à±à°®à°¤à°¿à°¨à°¿ à°‡à°¸à±à°¤à±à°¨à±à°¨à°¾à°¨à±. à°†à°§à°¾à°°à± à°†à°§à°¾à°°à°¿à°¤ à°ªà±à°°à°®à°¾à°£à±€à°•à°°à°£ à°µà±à°¯à°µà°¸à±à°¥à°¤à±‹ à°¸à°‚à°¬à°‚à°§à°¿à°¤ à°°à°µà°¾à°£à°¾ à°¶à°¾à°– à°¸à±à°µà°¯à°‚à°—à°¾ à°…à°‚à°¦à°¿à°‚à°šà±‡ à°¡à±à°°à±ˆà°µà°¿à°‚à°—à± à°²à±ˆà°¸à±†à°¨à±à°¸à± à°¸à°‚à°¬à°‚à°§à°¿à°¤ à°¸à±‡à°µ</h4>
+											</div>
+										
+										<div class="col-md-3"></div>
+										<div class="col-md-1 top-space text-right" style="margin-top: 10px;">
+											<input type="checkbox" name="checkMe" id="checkMe1" onclick="undisableBtn()" autocomplete="off" class="bhashini-skip-translation"><input type="hidden" id="__checkbox_checkMe1" name="__checkbox_checkMe" autocomplete="off" class="bhashini-skip-translation">
+										</div>
+										<div class="col-md-8 ">
+											<h4 id="h4id" style="font-style: italic; font-size: small; ">I understand
+													that the Biometrics and OTP I provide for authentication
+													shall be used only for authenticating my identity through
+													the Aadhaar Authentication Service or for obtaining my eKYC
+													data through Aadhaar eKYC Service for that specific
+													transaction and for no other purposes.</h4>
+													<h4 id="tel2" style="font-style: italic; font-size: small;display: none">à°¨à±‡à°¨à± à°ªà±à°°à°®à°¾à°£à±€à°•à°°à°£ à°•à±‹à°¸à°‚ à°…à°‚à°¦à°¿à°‚à°šà±‡ à°¬à°¯à±‹à°®à±†à°Ÿà±à°°à°¿à°•à±à°¸à± à°®à°°à°¿à°¯à± OTP à°†à°§à°¾à°°à± à°ªà±à°°à°®à°¾à°£à±€à°•à°°à°£ à°¸à±‡à°µ à°¦à±à°µà°¾à°°à°¾ à°¨à°¾ à°—à±à°°à±à°¤à°¿à°‚à°ªà±à°¨à± à°§à±ƒà°µà±€à°•à°°à°¿à°‚à°šà°¡à°¾à°¨à°¿à°•à°¿ à°²à±‡à°¦à°¾ à°† à°¨à°¿à°°à±à°¦à°¿à°·à±à°Ÿ à°²à°¾à°µà°¾à°¦à±‡à°µà±€ à°•à±‹à°¸à°‚ à°†à°§à°¾à°°à± eKYC à°¸à°°à±à°µà±€à°¸à± à°¦à±à°µà°¾à°°à°¾ à°¨à°¾ eKYC à°¡à±‡à°Ÿà°¾à°¨à± à°ªà±Šà°‚à°¦à°¡à°‚ à°•à±‹à°¸à°‚ à°®à°¾à°¤à±à°°à°®à±‡ à°®à°°à°¿à°¯à± à°‡à°¤à°° à°ªà±à°°à°¯à±‹à°œà°¨à°¾à°² à°•à±‹à°¸à°‚ à°‰à°ªà°¯à±‹à°—à°¿à°‚à°šà°¬à°¡à°µà°¨à°¿ à°¨à±‡à°¨à± à°…à°°à±à°¥à°‚ à°šà±‡à°¸à±à°•à±à°¨à±à°¨à°¾à°¨à±</h4>
+
+										</div>
+										
+										<div class="col-md-3"></div>
+										<div class="col-md-1 top-space text-right" style="margin-top: 10px;">
+											<input type="checkbox" name="checkMe" id="checkMe2" onclick="undisableBtn()" autocomplete="off" class="bhashini-skip-translation"><input type="hidden" id="__checkbox_checkMe2" name="__checkbox_checkMe" autocomplete="off" class="bhashini-skip-translation">
+										</div>
+										<div class="col-md-8 ">
+											<h4 id="h4id" style="font-style: italic; font-size: small; ">I understand
+													that the Transport Department shall ensure security and
+													confidentiality of my personal identity data provided for
+													the purpose of Aadhaar based authentication
+											
+											eKYC.
+											
+										</h4>
+										<h4 id="tel3" style="font-style: italic; font-size: small;display: none">à°†à°§à°¾à°°à± à°†à°§à°¾à°°à°¿à°¤ à°ªà±à°°à°®à°¾à°£à±€à°•à°°à°£/ eKYC à°•à±Šà°°à°•à± à°…à°‚à°¦à°¿à°‚à°šà°¬à°¡à°¿à°¨ à°¨à°¾ à°µà±à°¯à°•à±à°¤à°¿à°—à°¤ à°—à±à°°à±à°¤à°¿à°‚à°ªà± à°¡à±‡à°Ÿà°¾ à°¯à±Šà°•à±à°• à°­à°¦à±à°°à°¤à°¨à± à°®à°°à°¿à°¯à± à°—à±‹à°ªà±à°¯à°¤à°¨à± à°°à°µà°¾à°£à°¾ à°¶à°¾à°– à°¨à°¿à°°à±à°§à°¾à°°à°¿à°¸à±à°¤à±à°‚à°¦à°¨à°¿ à°¨à±‡à°¨à± à°…à°°à±à°¥à°‚ à°šà±‡à°¸à±à°•à±à°¨à±à°¨à°¾à°¨à±</h4>
+
+										<audio class="concent" style="display: none;" controls="">
+											<source src="mpeg/aadharaudio.mpeg" type="audio/mpeg">
+										</audio>
+										<audio class="concent" style="display: none;" controls="">
+											<source src="mpeg/englishaudio.mpeg" type="audio/mpeg">
+										</audio>
+									</div>
+									</div> 
+
+									<div class="col-md-12 top-space">
+										<div class="col-md-5"></div>
+										<div class="col-md-2 top-space">
+											
+										</div>
+										<div class="col-md-5 top-space"></div>
+
+										<div class="col-md-5"></div>
+										<div class="col-md-2 top-space">
+											<div id="resendotpdiv" style="display: none">
+												<div class="col-md-6 top-space">
+													<button id="resendotp" class="btn btn-sm" value="Resend OTP" disabled="%{isReadonlyFlag()}" onclick="checkAadharExistence(); return false;">Resend OTP</button>
+												</div>
+												<div class="col-md-6 top-space">
+													<span id="ms_timer"></span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-5 top-space"></div>
+									</div> 
+
+
+								 <div class="col-md-12 top-space" align="center"></div>
+									<!-- <div class="col-md-12 top-space" align="center" id="msgBox" style="color:#0000FF"></div> -->
+									<div class="col-md-12 top-space  text-center">
+										<input type="submit" value="Authenticate" id="verify" disabled="disabled" class="btn" onclick="getAuthenticate(); return false;" autocomplete="off">
+
+										&nbsp;&nbsp;&nbsp;&nbsp; 
+										
+										<!-- <input type="button" value="Cancel" class="btn"
+											onclick="window.location.href='/sarathiHomePublic.do'" />  -->
+											
+											<input type="button" id="backPage" value="Cancel &amp; use alternate method for authentication" class="btn" onclick="window.location.href='ekycForm.do'" autocomplete="off">	
+									</div>
+								</fieldset>
+								</div>
+							</div>
+						
+
+
+
+					<!-- <hr />  to remove 10-11-2020-->
+					<form id="ekycForm" name="ekycformDisplay" action="/sarathiservice/ekycForm.do" method="post">
+						<div id="ekycFormPageId3" style="display: none">
+							<input type="hidden" name="txn" id="txn" autocomplete="off" class="bhashini-skip-translation">
+							<input type="hidden" name="reqId" id="reqId" autocomplete="off" class="bhashini-skip-translation">
+							<input type="hidden" name="relation" id="relation" autocomplete="off" class="bhashini-skip-translation">
+							<input type="hidden" name="stateCode" id="stateCode" autocomplete="off" class="bhashini-skip-translation">
+							<input type="hidden" name="distCode" id="distCode" autocomplete="off" class="bhashini-skip-translation">
+							<input type="hidden" name="changeofNameService" id="changeofNameService" autocomplete="off" class="bhashini-skip-translation">
+							<input type="hidden" name="changeOfDobService" id="changeOfDobService" autocomplete="off" class="bhashini-skip-translation">
+							<input type="hidden" name="nameDobFlag" id="nameDobFlag" autocomplete="off" class="bhashini-skip-translation">
+							<input type="hidden" name="otpcode" id="otpcode" autocomplete="off" class="bhashini-skip-translation">						
+                             <input type="hidden" name="userConfirm" id="userConfirm" autocomplete="off" class="bhashini-skip-translation">
+<!-- 							<div class="col-md-12">&nbsp;</div> -->
+<!-- 							<div class="col-md-12">&nbsp;</div> -->
+							<div class="col-md-12 top-space">
+						<fieldset class="scheduler-border">
+					<legend class="scheduler-border">
+						Applicant Details
+					</legend>
+					<div class="col-md-9 top-space">
+								<div class="col-md-12 top-space">
+								<div class="row paddingbot">
+									<div class="col-md-3 control-label labeled text-right">
+										<label id="ekycForm_label_ApplicantName">Applicant Name</label>
+									</div>
+									<div class="col-md-4">
+											<label id="newFullName" class="form-control input-sm" style="width: 282px;"> 
+											</label>
+										</div>									
+									
+									<div class="col-md-2 control-label labeled text-right">
+										<label id="ekycForm_dob">Date Of Birth</label>
+									</div>
+									<div class="col-md-3">
+											<label id="dateOfBirth" class="form-control input-sm" style="width: 282px;"> 
+											</label>
+										</div>
+								</div>								
+								<div class="row paddingbot">
+								   
+								   <div class="col-md-3 control-label labeled text-right">
+										<label id="ekycForm_label_RelName">Relation Name</label><!-- changed21-10-2020 -->
+									</div>
+										<div class="col-md-4">
+											<label id="relationName" class="form-control input-sm" style="width: 282px;"> 
+											</label>
+										</div>
+										<div class="col-md-2 control-label labeled">
+										<label class="red">*</label>
+											<label id="ekycForm_Gen">Gender</label>
+										
+									</div>
+									<div class="col-md-3">
+											<label id="gender" class="form-control input-sm">
+												
+											</label>
+										</div>									
+								</div>							
+									<input type="hidden" name="applDate" id="ekycForm_applDate" autocomplete="off" class="bhashini-skip-translation">
+									<input type="hidden" name="ret" id="ekycForm_ret" autocomplete="off" class="bhashini-skip-translation">
+                               </div>
+							</div>
+							<div class="col-md-3 text-center">
+								
+										<div class="img_left">
+											<img src="" id="imgDisplay" style="height: 1.75in; width: 1.4in;border:1px solid #ccc;">
+									<input type="hidden" name="applicantPhoto" id="applicantPhoto" autocomplete="off" class="bhashini-skip-translation">						
+								</div>
+							</div>
+					</fieldset>					
+					 <fieldset class="scheduler-border">
+					<legend class="scheduler-border">
+						Address Details
+					</legend>
+					
+								<div class="col-md-9 top-space">		
+								 <div class="row paddingbot">
+									    <div class="col-md-3 control-label labeled text-right">
+											<label id="ekycForm_House">House No</label>
+										</div>
+										<div class="col-md-4">
+											<label id="house" class="form-control input-sm">
+												
+											</label> 										 	
+										</div>
+										<div class="col-md-2 control-label labeled text-right">
+											<label id="ekycForm_Street">Street</label>
+										</div>
+										<div class="col-md-3">
+											<label id="street" class="form-control input-sm">
+												
+											</label>										 	
+								        </div>		
+								</div>	
+								<div class="row paddingbot">
+                                        <div class="col-md-3 control-label labeled text-right">
+											<label id="ekycForm_Locality">Locality</label>
+										</div>
+										<div class="col-md-4">
+										<label id="location" class="form-control input-sm">
+												
+											</label>
+										</div>								
+										<div class="col-md-2 control-label labeled text-right">
+											<label id="ekycForm_Landmark">Landmark</label>
+										</div>
+										<div class="col-md-3">
+											<label id="lm" class="form-control input-sm">
+												
+											</label>
+											</div>		
+								</div>
+								<div class="row paddingbot">
+								       <div class="col-md-3 control-label labeled text-right">
+											<label id="ekycForm_ekyc_label_villortown">Village/Town/City</label>
+										</div>
+										<div class="col-md-4">
+										<label id="villOrTown" class="form-control input-sm">
+												
+											</label>
+										</div>
+										<div class="col-md-2 control-label labeled text-right">
+											<label id="ekycForm_ekyc_label_pc">Postal Code</label>
+										</div>
+										<div class="col-md-3">
+											<label id="pc" class="form-control input-sm">
+												
+											</label>
+										</div>
+								</div>
+								
+									<div class="row paddingbot">
+
+								       <div class="col-md-3 control-label labeled text-right">
+											<label id="ekycForm_Post_Office">Post Office</label>
+										</div>
+										<div class="col-md-4">
+											<label id="po" class="form-control input-sm">
+												
+											</label>
+										</div>
+										<div class="col-md-2 control-label labeled text-right">
+											<label id="ekycForm_ekyc_label_district">District</label>
+										</div>
+										<div class="col-md-3">
+											<label id="dist" class="form-control input-sm">
+												
+											</label>
+										</div>
+										
+									</div>
+									
+									<div class="row paddingbot">
+									    <div class="col-md-3 control-label labeled text-right">
+										<label id="ekycForm_State">State</label>
+									</div>
+									<div class="col-md-4">
+										<label id="state" class="form-control input-sm"> 
+										</label>
+									</div>
+										<div class="col-md-2 control-label labeled text-right">
+											<label id="ekycForm_Country">Country</label>
+										</div>
+										<div class="col-md-3">
+											<label id="country" class="form-control input-sm"> 
+										    </label> 										 	
+								        </div>		
+								</div>			
+                               </div>
+                              <div class="col-md-12 top-space" align="center">
+							<input type="submit" value="Proceed" id="saveid" class="btn btn-sm" onclick="return validateEkyc();" autocomplete="off">
+
+							
+						<!--  input type="button" value="Cancel" class="btn"	onclick="window.location.href='stateSelectBean.do'" />	-->
+							<input type="submit" value="Cancel" id="ekycForm_0" class="btn btn-sm" onclick="goToHomePage()" autocomplete="off">
+
+						
+						</div>
+                         </fieldset>		 				
+                               
+							</div>					
+						</div>
+						
+						<h3 class="text-success " align="center">
+							
+						</h3>				
+						<div id="authentiateWithSarathi" style="display: none">
+					<!-- <div id="ekycFormPageId3" style="display: none"> -->
+					<fieldset class="scheduler-border col-md-12">
+						<div class="col-md-12 top-space" style="margin-top: 25px;">
+							<div class="col-md-4"></div>
+							<div class="col-md-2 text-center top-space" style="width: 13%;margin-left: -1%;">
+								<label class="redColor">*</label>
+								<label id="ekycForm_label_mobileNumber">Mobile Number</label>
+								<!-- onblur="validOTP();" validOTP -->
+								<!-- onfocus="onfocusremove();"  -->
+								:
+							</div>
+							<div class="col-md-2">
+							
+							
+								<input type="text" name="mobileNumber" maxlength="10" id="mobileNumber" class="form-control input-sm bhashini-skip-translation" title="Enter Mobile Number" onfocus="onfocusremove();" onblur="validatemobile();" onkeypress="return isNumCheck(event);" onkeyup="EnableDisableMB( )" autocomplete="off" placeholder="Enter Mobile Number Here">
+							
+							</div>
+							<div class="col-md-4">
+<!-- 								<div id="generateotpdiv"> -->
+<!-- 									<button id="generateSarathiotp" -->
+<!-- 										class="btn btn-sm generateSarathiotp" value="Generate OTP" -->
+<!-- 										disabled="disabled" onclick="gensarathiOTP(); return false">Generate -->
+<!-- 										OTP</button> -->
+
+<!-- 									<button id="generateResendSarathiotp" -->
+<!-- 										class="btn btn-sm generateSarathiotp" value="Resend OTP" -->
+<!-- 										disabled="disabled" onclick="genResendsarathiOTP(); return false">Resend -->
+<!-- 										OTP</button> -->
+<!-- 								</div> -->
+							</div>
+							<br> <br>
+						</div>
+						<br> <br> <br>
+						<div id="captchaBox" style="">
+						<div class="col-md-12 top-space">
+							<div class="col-md-5 control-label labeled" style="width: 41.5%">
+								<label class="redColor">*</label>
+								Captcha
+								:
+							</div>
+							<div class="col-md-2" style="margin-left: 4%">
+								<input type="text" name="entcaptxt" id="entcaptxt" maxlength="6" onkeyup="EnableDisableMB()" autocomplete="off" class="form-control input-sm bhashini-skip-translation" title="Enter Captcha" placeholder="Enter Captcha Here">
+							</div>
+							<div class="col-md-2">
+								&nbsp;&nbsp;<img alt="" id="capimg" src="jsp/common/captchaimage.jsp" title="Captcha" style="height: 25px;">&nbsp; <img alt="" src="images/refresh.jpg" title="Click Here to Refresh Captcha" style="height: 25px; cursor: pointer;" onclick="changeCaptcha()">
+							</div>
+							<input type="hidden" name="captreq" id="captreq" autocomplete="off" class="bhashini-skip-translation"> <br> <br>
+						</div>
+						</div>
+							<div class="col-md-12 top-space" align="center" id="mobilesuccMsgBox" style="color: #0000FF"></div>
+						
+
+
+						
+
+                      <div id="otpbox" style="display: none;">
+						<div class="col-md-12 top-space">
+							<div class="col-md-4"></div>
+							<div class="col-md-2 text-center top-space" style="width: 12%">
+								<label id="ekycForm_label_enterotp__">Enter OTP Here :</label>
+								
+							</div>
+							<div class="col-md-2 top-space">
+									<!-- onfocus="onfocusremove();"  -->
+									<input type="text" name="otpNumberSarathi" maxlength="6" disabled="disabled" id="otpNumberSarathi" class="form-control input-sm bhashini-skip-translation" title="Enter OTP" onfocus="onfocusremove();" onblur="validOTP();" onkeypress="return isNumCheck(event)" onkeyup="EnableDisableOtpVerifySarathi( )" autocomplete="off" placeholder="Enter OTP Here">
+								
+								<!--  otpMsgBox-->
+
+								<!-- /input-group -->
+							</div>
+						</div>
+						</div>
+						<div id="captcha1box" style="display: none;">
+						<br>
+						<div class="col-md-12" style="margin-top: 1%">
+							<div class="col-md-5 control-label labeled">
+								<label class="redColor">*</label>
+								Captcha
+								:
+							</div>
+							<div class="col-md-2" style="margin-left: 4%">
+								<input type="text" name="entcaptxt1" id="entcaptxt1" maxlength="6" autocomplete="off" class="form-control input-sm bhashini-skip-translation" onkeyup="EnableDisableOtpVerifySarathi( )" title="Enter Captcha" placeholder="Enter Captcha Here">
+							</div>
+							<div class="col-md-2">
+								&nbsp;&nbsp;<img alt="" id="capimg1" src="jsp/common/captchaimage.jsp" title="Captcha" style="height: 25px;">&nbsp; <img alt="" src="images/refresh.jpg" title="Click Here to Refresh Captcha" style="height: 25px; cursor: pointer;" onclick="changeCaptcha1()">
+							</div>
+						</div>
+						<div class="col-md-3"></div>
+										<div class="col-md-1 top-space text-right" style="margin-top: 10px;">
+											<input type="checkbox" name="otpCheckbox" id="otpCheckbox" onchange="EnableDisableOtpVerifySarathi()" autocomplete="off" class="bhashini-skip-translation"><input type="hidden" id="__checkbox_otpCheckbox" name="__checkbox_otpCheckbox" autocomplete="off" class="bhashini-skip-translation">
+										</div>
+										<div class="col-md-8 " id="otpCheckboxSentence">
+											<h4 id="h4id" style="font-style: italic; font-size: small; color:blue; ">	
+											   I hereby declare that I have no objection and provide my consent for the use of my mobile number to furnish the status updates of the Sakala application. 
+										</h4>
+										<h4 id="tel3" style="font-style: italic; font-size: small;color:blue; display: none">
+										à°¨à±‡à°¨à± à°Žà°Ÿà±à°µà°‚à°Ÿà°¿ à°…à°­à±à°¯à°‚à°¤à°°à°‚ à°µà±à°¯à°•à±à°¤à°‚ à°šà±‡à°¯à°¨à± à°®à°°à°¿à°¯à± à°¨à°¾ à°®à±Šà°¬à±ˆà°²à± à°¨à°‚à°¬à°°à±â€Œà°¨à± 
+										Sakala à°…à°ªà±à°²à°¿à°•à±‡à°·à°¨à±â€Œà°²à±‹ à°¸à±à°¥à°¿à°¤à°¿ à°…à°ªà±â€Œà°¡à±‡à°Ÿà±à°²à± à°…à°‚à°¦à°¿à°‚à°šà°¡à°¾à°¨à°¿à°•à°¿ à°‰à°ªà°¯à±‹à°—à°¿à°‚à°šà±‡à°‚à°¦à±à°•à± à°¨à°¾ à°¸à°®à±à°®à°¤à°¿ à°‡à°¸à±à°¤à±à°¨à±à°¨à°¾à°¨à±.
+										</h4>
+						</div>
+
+		           </div>
+<!-- 		           <div class="col-md-12 top-space"> -->
+<!-- 							<div class="col-md-5"></div> -->
+<!-- 							<div class="col-md-4"> -->
+<!-- 								<div id="generateotpdiv"> -->
+<!-- 									<button id="generateSarathiotp" -->
+<!-- 										class="btn btn-sm generateSarathiotp" value="Generate OTP" -->
+<!-- 										disabled="disabled" onclick="gensarathiOTP(); return false">Generate -->
+<!-- 										OTP</button> -->
+
+<!-- 									<button id="generateResendSarathiotp" -->
+<!-- 										class="btn btn-sm generateSarathiotp" value="Resend OTP" -->
+<!-- 										disabled="disabled" onclick="genResendsarathiOTP(); return false">Resend -->
+<!-- 										OTP</button> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+						<div class="col-md-12 top-space" align="center" id="mobotpMsgBox" style="color: #FF0000"></div>
+						<div class="col-md-12 top-space" align="center" id="mobileerrMsgBox" style="color: #FF0000"></div>
+					</fieldset>
+					<hr>
+					<div class="col-md-12 top-space  text-center">
+						<div id="generateotpdiv">
+							<button id="generateSarathiotp" class="btn generateSarathiotp" value="Generate OTP" disabled="disabled" onclick="gensarathiOTP(); return false">Generate
+								OTP</button>&nbsp;&nbsp;&nbsp;
+							 <input type="button" value="Submit OTP" id="verifySarathi" class="btn" disabled="disabled" onclick="verifiedBySarathi(); return false;" style="display:none;" autocomplete="off">&nbsp;&nbsp;
+							<button id="generateResendSarathiotp" class="btn generateSarathiotp" value="Resend OTP" disabled="disabled" onclick="genResendsarathiOTP(); return false" style="display: none;">Resend
+								OTP</button>&nbsp;&nbsp;&nbsp;
+							
+							
+								<input type="button" value="Reset" class="btn" name="resetDl" id="resetDl" onclick="resetDL(0)" autocomplete="off">&nbsp;&nbsp;&nbsp;
+							
+							<input type="submit" value="Cancel" id="ekycForm_2" class="btn" onclick="goToHomePage()" autocomplete="off">
+&nbsp;&nbsp;&nbsp;
+						</div>
+					</div>
+					<!-- </div> -->
+				</div>
+				
+				<!-- 22-01-2021 -->
+				<p id="demo"></p>
+			</form>
+
+
+
+		</div></form>
+	</div>
+
+
+
+			</div>
+<!-- 			<div class="footer"> -->
+				
+
+
+
+<link rel="stylesheet" href="https://vani-hyd.nic.in/rtoBot/JSandCSS\chatbot.css"> 
+
+
+<style>
+.fa
+{
+    font-size: 18px !important;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+/*     position: absolute; */
+    top: 7px;
+}
+/* .list-unstyled > li
+{
+padding-left: 50px;
+} */
+.ip_address_text
+{
+color: #fff; 
+padding: 0px 0px 7px 10px; 
+font-style: italic; 
+font-size: 12px;
+}
+.footer_main {
+	background-color: #1ca6ef;
+	padding: 5px 0px 0px 0px;
+}
+
+.footer_main ul li a {
+	color: #141111;
+	font-size: 14px;
+	letter-spacing: 0.3px;
+	line-height: 25px;
+}
+
+.designed_by {
+	color: #141111;
+	font-size: 10.5px;
+	letter-spacing: 0.2px;
+	font-style: italic;
+}
+
+.containermsg_vani p {
+	text-align: initial;
+}
+
+.footer_chat_box {
+	text-align: center;
+}
+
+.left {
+	left: 0;
+	background-color: inherit !important;
+}
+
+.right {
+	right: 0;
+	background-color: inherit !important;
+}
+
+.chatbutton {
+	width: 100px;
+	height: 100px;
+}
+.change_state
+{
+color:#141111 !important; 
+letter-spacing: 0.2px; 
+font-size: 13px;
+text-decoration: none;
+}
+#pdfModal {
+}
+.ekycfooter-content a
+{
+color: darkblue !important;
+font-weight: bold !important;
+}
+
+@media ( min-width : 600px) {
+	/* For tablets & desktop: */
+	.chatbutton {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.footer_main p {
+		padding: 0px 0px 0px 0px;
+	}
+	.footer_main {
+		text-align: center;
+	}
+	.footer_chat_box {
+		text-align: center;
+	}
+	.ip_address_text
+	{
+	padding: 10px 0px 0px 0px; 
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.footer_main {
+		text-align: center;
+	}
+	.footer_chat_box {
+		text-align: center;
+	}
+}
+
+.popupclose {
+	background-color: white !important;
+	color: #695f5f;
+	opacity: 1;
+	border-radius: 25px;
+	width: 26px;
+	height: 25px;
+	text-align: center;
+	box-shadow: 1px 1px 2px rgb(0 0 0);
+	-moz-box-shadow: 1px 1px 2px rgb(0 0 0);
+	-webkit-box-shadow: 1px 1px 2px rgb(0 0 0);
+	-o-box-shadow: 1px 1px 2px rgb(0 0 0);
+}
+
+.popupli {
+	padding: 5px 6px;
+    background-color: #3ba8c4;
+    margin-bottom: 1% !important;
+    font-size: 14.5px;
+    color: #FFFFFF;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0 3px 5px rgb(0 0 0/ 50%);
+    -webkit-box-shadow: 0 3px 5px rgb(0 0 0 / 50%);
+    -o-box-shadow: 0 3px 5px rgb(0 0 0/ 50%);
+    border: 1px solid rgba(0, 0, 0, 0);
+/*     cursor: pointer; */
+	background-color: #0035c9;
+    font-size: 14.5px;
+    letter-spacing: 0.05em;
+    font-family: system-ui;
+}
+
+.popupli:hover {
+	box-shadow: 0 0px 0px rgb(0, 0, 0);
+	-moz-box-shadow: 0 0px 0px rgb(0, 0, 0);
+	-webkit-box-shadow: 0 0px 0px rgb(0, 0, 0);
+	-o-box-shadow: 0 0px 0px rgb(0, 0, 0);
+}
+
+.popup-servnames:hover, .popupfilepath:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.popupspan {
+	font-size: 17px;
+	padding-right: 9px;
+	color: #ffffff;
+}
+
+.modalpopup-header {
+	padding: 10px;
+	border-bottom: 0;
+	background: #074e81;
+	font-family:'Source Code Pro', sans-serif;
+	box-shadow: 0 3px 3px rgb(0 0 0/ 50%);
+	-moz-box-shadow: 0 3px 3px rgb(0 0 0/ 50%);
+	-webkit-box-shadow: 0 3px 3px rgb(0 0 0/ 50%);
+	-o-box-shadow: 0 3px 3px rgb(0 0 0/ 50%);
+}
+
+#contactless_statepopup_title {
+	margin: 0%;
+	color: white;
+	text-align: center;
+	font: 20px 'MuseoSlab500Regular', arial, helvetica, sans-serif;
+	letter-spacing: 0.03em;
+	text-shadow: 0 -1px 1px rgb(0 0 0/ 50%);
+}
+
+.modalpopup-body {
+	overflow-x: hidden;
+	overflow-y: auto;
+	min-height: 200px;
+	max-height: 600px;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	.modalpopup-body {
+		max-height: 400px;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.modalpopup-body {
+		max-height: 500px;
+	}
+	.parivahan_footerlink,
+	.change_state
+	{
+	/* margin-left: -52px; */
+	}
+}
+
+.ekycheader {
+	font-family: system-ui; 
+	letter-spacing: 0.02em; 
+	font-size: 13px; 
+	/* font-weight: bold; */
+	line-height: 1.8em;
+	text-align: justify;
+}
+@media only screen and (min-width: 1200px)
+{
+.parivahan_footerlink, .change_state {
+   /*  margin-left: -39px; */
+}
+}
+
+.popup-servnames {
+	color: #fff;
+    margin-right: 2%;
+}
+
+.popupfilepath {
+	/* font-size: 20px; */
+    cursor: pointer;
+    color: #fff;
+}
+
+.bhashini-note {
+    width: 100%;
+    border: 1px solid deepskyblue;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+   /*  font-size: 200px; */
+    padding: 1px;
+    text-align: center;
+
+    animation: glowBlink 1s infinite alternate;
+}
+
+
+@keyframes glowBlink {
+    0% {
+        background-color: yellow;
+        box-shadow: 0 0 5px deepskyblue;
+    }
+    100% {
+        background-color: #ffe6e6;
+        box-shadow: 0 0 20px deepskyblue, 0 0 40px deepskyblue;
+    }
+}  
+
+</style>
+
+
+
+<!------------------footer------------------>
+<section class="footer_main" style="clear:both;">
+<div class="container-fluid">
+<div class="row" style="clear:both;">
+<div class="col-md-11 col-sm-10" style="">
+<div class="col-md-12 col-sm-12 text-center">
+	<p style="color: #ffffff; font-size: 12px; font-style: italic; margin: 0;">
+		Best viewed in Google Chrome 140+, Microsoft Edge 140+, Mozilla Firefox 140+, and Opera 120+ browsers. Recommended screen resolution: 1366 * 768 or higher.
+	</p>
+</div>
+<div class="row">
+				<div class="col-md-4 col-sm-4" style="">
+					
+					<div class="col-md-7">
+					<p class="designed_by">Designed, developed and hosted by <b style="color: #0072ff;">S4</b> </p>
+					<div class="nic_logo">
+						<img src="https://sarathi.parivahan.gov.in/sarathiservice/images/footer/logo.png" alt="NIC" style="cursor: pointer;" onclick="javascript:w=window.open('http://www.nic.in','mywin');">
+					</div>
+					</div>
+					<div class="col-md-5">
+					
+
+					
+					<div class="gov_logo">
+						<img src="https://sarathi.parivahan.gov.in/sarathiservice/images/footer/digital_logo_main.png" alt="Gov" border="0" style="cursor: pointer;" onclick="javascript:w=window.open('https://www.digitalindia.gov.in','mywin');">
+					</div>
+					
+									
+					</div>
+					
+				</div>
+
+				
+				<div class="col-md-2 col-sm-2">
+					<ul class="list-unstyled">
+				        <li><a href="https://sarathi.parivahan.gov.in/SarathiReport">Dashboard</a></li>
+						<li><a href="usereKYCauth.do">User Self-Registration</a></li>
+						<li><a href="doctorsReport.do">Find Doctor</a></li> 
+						<li><a href="https://sarathi.parivahan.gov.in/sarathi/useractivation.do">Activate User Account</a></li>										
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-2">
+					<ul class="list-unstyled">
+						<li><a id="faq" href="faquest.do?helpType=UM">User Manual</a></li>
+						<li><a href="faquest.do?helpType=AR">Acts &amp; Rules</a></li>
+						<!-- <li><a href="videoAndAudio.do">Videos/Audios</a></li> -->
+						<li><a href="scReader.do">Screen Reader</a></li>
+						<!-- <li><a href="sitemap.do">Sitemap</a></li> -->				
+					</ul>
+				</div>
+        		<div class="col-md-2 col-sm-2">
+					<ul class="list-unstyled">
+						<li><a href="ContactDet.do">Contact Us</a></li>							
+						<li><a href="feedbackMobAuth.do" style="">Feedback / Complaints</a></li>
+						 <li><a href="faquest.do?helpType=FA">FAQs</a></li>
+						<!-- <li><a href="#" onclick="return popup()" class="modalpopup-body " style="margin-left: -10px;">Contactless Services</a></li> -->	
+						  				
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-2">
+					<ul class="list-unstyled">
+					    <li><a href="stateSelection.do" style="" class="change_state">Change State</a></li>
+					    <li><a href="https://parivahan.gov.in" class="parivahan_footerlink">Parivahan</a></li>	
+					    <li><a href="sitemap.do">Sitemap</a></li>	
+					   <!--  <li><a href="faquest.do?helpType=FA" style="margin-left: -39px;">FAQs</a></li> -->					
+					</ul>
+				</div>
+				
+
+			</div>
+			
+			<div class="bhashini-note">
+				<h4>Correctness of the translation into the regional language lies with the respective State Transport Department. </h4>
+		  </div>
+		  
+
+	</div>
+	<div class="col-md-1 col-sm-2 col-xs-12 mb_center footer_chat_box" style="cursor:pointer;">
+		
+		
+	<div class="container">
+		<div class="row">
+			<div id="log" style="visibility: hidden; display:none;"></div>
+			<div id="logToSave" style="visibility: hidden; display:none;"></div>
+			<div class="modal fade" data-backdrop="static" data-keyboard="false" id="pdfModal" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">Ã—</button>
+							<h4 class="modal-title"></h4>
+						</div>
+						<div id="ulink"></div>
+						<iframe id="ifz" style="width:895px;height:600px;" src=""></iframe>
+					</div>
+				</div>
+			</div>	
+			<div id="Smallchat">
+				<div class="Layout Layout-open Layout-expand Layout-right" style="background-color: #3F51B5;color: rgb(255, 255, 255);opacity: 5;border-radius: 10px;transition: all 1s ease-in-out;">
+					<div class="Messenger_messenger">
+						<div class="Messenger_header" style="background-color: #207ad0; color: rgb(255, 255, 255);">
+							<img class="img-responsive headimg" src="https://vani-hyd.nic.in/rtoBot/images\vani-gif.gif" alt="Vani" style="width: 35px; height: 35px;">
+							<h4 class="Messenger_prompt">VANI - Virtual Assistance by NIC</h4>
+							<span class="chat_minimize_icon">
+								<i class="fa fa-minus" aria-hidden="true"></i>
+							</span>
+							<span class="chat_close_icon">
+								<i class="fa fa-close" aria-hidden="true"></i>
+							</span>
+						</div>
+				
+						<div class="Messenger_content">
+							<div class="Messages">
+								<div class="Messages_list">
+								</div>
+								<div class="modal fade modal-allow-interact" id="myModal" role="dialog" data-easein="slideUpBigIn" data-backdrop="false">
+									<div class="modal-dialog modal-sm" style="margin: 70px auto;">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close rotate" data-dismiss="modal">Ã—</button>
+												<h4 class="modal-title">Please Select Language</h4>
+											</div>
+											<div class="modal-body">
+												<div class="radio">
+													<label><input type="radio" name="optradio" checked="" autocomplete="off" class="bhashini-skip-translation">English</label>
+												</div>
+												<div class="radio">
+													<label><input type="radio" name="optradio" autocomplete="off" class="bhashini-skip-translation">Hindi</label>
+												</div>
+												<div class="radio disabled">
+													<label><input type="radio" name="optradio" disabled="" autocomplete="off" class="bhashini-skip-translation">Gujarati</label>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btnbtn-default rotate" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="typing" style="font-weight: bold;">
+								</div>
+							</div>
+							<div class="Input Input-blank" style="display: flex;">
+								<div style="flex: 90%;">
+                                        <label for="InputEnter">How may I help you?</label>
+                                        <input id="InputEnter" class="Input_field bhashini-skip-translation" placeholder="How may I help you?" data-html="true" maxlength="250" style="height: 50px; padding-left: 20px;" autocomplete="off">
+
+								</div>
+								<div style="flex: 10%;">
+									<button class="Input_buttonInput_button-send" id="buttonenter">
+										<div class="Icon" style="width: 18px; height: 18px;">
+											<svg width="57px" height="54px" viewBox="1496 193 57 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 18px; height: 18px;">
+												<g id="Group-9-Copy-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1523.000000, 220.000000) rotate(-270.000000) translate(-1523.000000, -220.000000) translate(1499.000000, 193.000000)">
+													<path d="M5.42994667,44.5306122 L16.5955554,44.5306122 L21.049938,20.423658 C21.6518463,17.1661523 26.3121212,17.1441362 26.9447801,20.3958097 L31.6405465,44.5306122 L42.5313185,44.5306122 L23.9806326,7.0871633 L5.42994667,44.5306122 Z M22.0420732,48.0757124 C21.779222,49.4982538 20.5386331,50.5306122 19.0920112,50.5306122 L1.59009899,50.5306122 C-1.20169244,50.5306122 -2.87079654,47.7697069 -1.64625638,45.2980459 L20.8461928,-0.101616237 C22.1967178,-2.8275701 25.7710778,-2.81438868 27.1150723,-0.101616237 L49.6075215,45.2980459 C50.8414042,47.7885641 49.1422456,50.5306122 46.3613062,50.5306122 L29.1679835,50.5306122 C27.7320366,50.5306122 26.4974445,49.5130766 26.2232033,48.1035608 L24.0760553,37.0678766 L22.0420732,48.0757124 Z" id="sendicon" fill="#96AAB4" fill-rule="nonzero"></path>
+												</g>
+											</svg>
+										</div>
+										Send Message
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<!--===============CHAT ON BUTTON STRART===============-->
+				<div class="chat_on bubbly-button">
+					<span class="chat_on_icon">
+						<img class="img-responsive" src="https://vani-hyd.nic.in/rtoBot/images\vani-gif.gif" alt="Vani" style="width: 100px; height: 100px;">
+					</span>
+				</div> 
+				<!--===============CHAT ON BUTTON END===============-->
+			</div>
+		</div>
+	</div>
+		
+		
+	</div>
+</div>
+</div>
+</section>
+
+	<div class="modal fade" data-backdrop="static" data-keyboard="false" id="contactless_statepopup" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!--  style="max-width: 500px; margin: 30px auto;" -->
+			<div class="modal-content">
+				<div class="modal-header modalpopup-header">
+					<button type="button" class="close popupclose" data-dismiss="modal" style="color: #2199e0;">x</button>
+					<h4 class="" id="contactless_statepopup_title">Faceless
+						Services</h4>
+				</div>
+				<div class="modal-body finalAlertBody modalpopup-body">
+					<div class="row">
+						<div class="col-md-12 top-space" id="contactless_services_list_"></div>
+						<div class="re-issue" style="background-color: #0035c9;font-size: 14.5px;letter-spacing: 0.05em; font-family: system-ui;"></div>
+					</div>
+					<div class="col-md-12 top-space center">
+						<input type="button" data-dismiss="modal" value="Skip" class="btn" style="float: right; background: #2199e0;" autocomplete="off">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+<script src="https://vani-hyd.nic.in/rtoBot/JSandCSS\chatbot.js"></script>
+<script src="https://vani-hyd.nic.in/rtoBot/JSandCSS\velocity.min.js"></script>
+<script src="https://vani-hyd.nic.in/rtoBot/JSandCSS\velocity.ui.min.js"></script> 
+
+
+<script>
+	$(document).ready(function() {
+	    $( document ).on( 'focus', ':input', function() {
+	        $( this ).attr( 'autocomplete', 'off' );
+	    });
+	});
+	$('input').attr('autocomplete','off');
+</script>
+
+
+
+
+		</div>
+	</div>
+	
+	
+	  
+ <script type="text/javascript" src="https://translation-plugin.bhashini.co.in/v3/website_translation_utility.js" defer=""></script>	
+	
+<script type="text/javascript">
+	window.onload = function() {
+		$("input:not([type=button]):not([type=reset]):not([type=submit])").addClass("bhashini-skip-translation");
+		$("select, select optgroup,select option,textarea,datalist,datalist > option").addClass("bhashini-skip-translation");
+		$("table, thead, tbody, tr, th, td, caption, col, colgroup").addClass("bhashini-skip-translation");
+	//setLanguageComboBox('Sarathi_Lang_ID');
+	};
+</script>
+	
+    
+    
+	
+
+
+
+
+	
+
+
+
+
+<script>
+$(document).ready(function() {
+	
+	var loc = "?null";
+	console.log("loc:"+loc);
+	if( loc.split("=")[0] == "?request_locale"){
+		console.log("new myloca:"+loc);
+		$('#selectLang').val(loc);
+		sessionStorage.setItem("SelItem", loc);
+	}else{
+		
+		var selItem = sessionStorage.getItem("SelItem"); 
+		console.log("use sessionstorage:"+selItem)
+	    $('#selectLang').val(selItem);
+	}
+		/* var selItem = sessionStorage.getItem("SelItem");  
+    $('#selectLang').val(selItem);
+    $('#selectLang').change(function() { 
+        var selVal = $(this).val();
+        sessionStorage.setItem("SelItem", selVal);
+    }); */
+    
+      // bind change event to select
+      /* $('#selectLang').change(function () {
+          var url = $(this).val(); 
+          	alert(url);// get selected value
+         // $('#langSelection1').val($(this).val());
+          $("#selectLang").val($(this).val()).trigger("chosen:updated");
+      }); */
+	/* window.onload = function() {
+	    var selItem = sessionStorage.getItem("SelItem");  
+	    $('#selectLang').val(selItem);
+	    }
+	    $('#selectLang').change(function() { 
+	        var selVal = $(this).val();
+	        sessionStorage.setItem("SelItem", selVal);
+	    }); */
+    });
+</script>
+
+
+</div><div class="bhashini-feedback-modal">
+  <div class="bhashini-feedback-content">
+    <div class="close-modal-container">
+        <span class="close-modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+  <mask id="mask0_10985_128804" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+    <rect width="16" height="16" fill="#D9D9D9"></rect>
+  </mask>
+  <g mask="url(#mask0_10985_128804)">
+    <path d="M3.11214 13.8657L2.1875 12.9411L7.10099 8.02758L2.1875 3.11409L3.11214 2.18945L8.02562 7.10294L12.9391 2.18945L13.8637 3.11409L8.95026 8.02758L13.8637 12.9411L12.9391 13.8657L8.02562 8.95221L3.11214 13.8657Z" fill="#424242"></path>
+  </g>
+</svg>
+        </span>
+    </div>
+      <div class="bhashini-feedback-form">
+      <div class="bhashini-feedback-star-container">
+      <h2 class="bhashini-feedback-heading">Rate this translation</h2>
+      <div class="star-rating">
+         <span class="star" data-value="1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+            <path d="M13.0925 1.83921C13.8757 0.262891 16.1243 0.262888 16.9075 1.83921L19.8162 7.69337C20.1263 8.31759 20.7223 8.75057 21.4118 8.85265L27.8783 9.80991C29.6194 10.0677 30.3143 12.2063 29.0572 13.4382L24.3884 18.0136C23.8905 18.5014 23.6629 19.202 23.7789 19.8893L24.8667 26.3351C25.1596 28.0707 23.3404 29.3925 21.7803 28.5775L15.9861 25.5511C15.3683 25.2284 14.6317 25.2284 14.0139 25.5511L8.21972 28.5775C6.65956 29.3925 4.84036 28.0707 5.13328 26.3351L6.22111 19.8893C6.3371 19.202 6.10947 18.5014 5.61164 18.0136L0.942831 13.4382C-0.314316 12.2063 0.380554 10.0677 2.12174 9.80991L8.58821 8.85265C9.27772 8.75057 9.87367 8.31759 10.1838 7.69337L13.0925 1.83921Z"></path>
+          </svg>
+        </span>
+          <span class="star" data-value="2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+            <path d="M13.0925 1.83921C13.8757 0.262891 16.1243 0.262888 16.9075 1.83921L19.8162 7.69337C20.1263 8.31759 20.7223 8.75057 21.4118 8.85265L27.8783 9.80991C29.6194 10.0677 30.3143 12.2063 29.0572 13.4382L24.3884 18.0136C23.8905 18.5014 23.6629 19.202 23.7789 19.8893L24.8667 26.3351C25.1596 28.0707 23.3404 29.3925 21.7803 28.5775L15.9861 25.5511C15.3683 25.2284 14.6317 25.2284 14.0139 25.5511L8.21972 28.5775C6.65956 29.3925 4.84036 28.0707 5.13328 26.3351L6.22111 19.8893C6.3371 19.202 6.10947 18.5014 5.61164 18.0136L0.942831 13.4382C-0.314316 12.2063 0.380554 10.0677 2.12174 9.80991L8.58821 8.85265C9.27772 8.75057 9.87367 8.31759 10.1838 7.69337L13.0925 1.83921Z"></path>
+          </svg>
+        </span>
+         <span class="star" data-value="3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+            <path d="M13.0925 1.83921C13.8757 0.262891 16.1243 0.262888 16.9075 1.83921L19.8162 7.69337C20.1263 8.31759 20.7223 8.75057 21.4118 8.85265L27.8783 9.80991C29.6194 10.0677 30.3143 12.2063 29.0572 13.4382L24.3884 18.0136C23.8905 18.5014 23.6629 19.202 23.7789 19.8893L24.8667 26.3351C25.1596 28.0707 23.3404 29.3925 21.7803 28.5775L15.9861 25.5511C15.3683 25.2284 14.6317 25.2284 14.0139 25.5511L8.21972 28.5775C6.65956 29.3925 4.84036 28.0707 5.13328 26.3351L6.22111 19.8893C6.3371 19.202 6.10947 18.5014 5.61164 18.0136L0.942831 13.4382C-0.314316 12.2063 0.380554 10.0677 2.12174 9.80991L8.58821 8.85265C9.27772 8.75057 9.87367 8.31759 10.1838 7.69337L13.0925 1.83921Z"></path>
+          </svg>
+        </span>
+          <span class="star" data-value="4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+            <path d="M13.0925 1.83921C13.8757 0.262891 16.1243 0.262888 16.9075 1.83921L19.8162 7.69337C20.1263 8.31759 20.7223 8.75057 21.4118 8.85265L27.8783 9.80991C29.6194 10.0677 30.3143 12.2063 29.0572 13.4382L24.3884 18.0136C23.8905 18.5014 23.6629 19.202 23.7789 19.8893L24.8667 26.3351C25.1596 28.0707 23.3404 29.3925 21.7803 28.5775L15.9861 25.5511C15.3683 25.2284 14.6317 25.2284 14.0139 25.5511L8.21972 28.5775C6.65956 29.3925 4.84036 28.0707 5.13328 26.3351L6.22111 19.8893C6.3371 19.202 6.10947 18.5014 5.61164 18.0136L0.942831 13.4382C-0.314316 12.2063 0.380554 10.0677 2.12174 9.80991L8.58821 8.85265C9.27772 8.75057 9.87367 8.31759 10.1838 7.69337L13.0925 1.83921Z"></path>
+          </svg>
+        </span>
+          <span class="star" data-value="5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+            <path d="M13.0925 1.83921C13.8757 0.262891 16.1243 0.262888 16.9075 1.83921L19.8162 7.69337C20.1263 8.31759 20.7223 8.75057 21.4118 8.85265L27.8783 9.80991C29.6194 10.0677 30.3143 12.2063 29.0572 13.4382L24.3884 18.0136C23.8905 18.5014 23.6629 19.202 23.7789 19.8893L24.8667 26.3351C25.1596 28.0707 23.3404 29.3925 21.7803 28.5775L15.9861 25.5511C15.3683 25.2284 14.6317 25.2284 14.0139 25.5511L8.21972 28.5775C6.65956 29.3925 4.84036 28.0707 5.13328 26.3351L6.22111 19.8893C6.3371 19.202 6.10947 18.5014 5.61164 18.0136L0.942831 13.4382C-0.314316 12.2063 0.380554 10.0677 2.12174 9.80991L8.58821 8.85265C9.27772 8.75057 9.87367 8.31759 10.1838 7.69337L13.0925 1.83921Z"></path>
+          </svg>
+        </span>
+      </div>
+        </div>
+
+       <!-- <div style="margin-top: 1rem;">
+          <p> 
+            <strong> Page URL: </strong> 
+            <span id="current-page-url" style="text-decoration: underline;"> </span> 
+          </p>
+        </div> -->
+
+
+     
+      <textarea style="display: none;" class="feedback-textarea bhashini-skip-translation" placeholder="Describe your issues here..."></textarea>
+        <div class="suggested-feedback-container" style="display: none;">
+        <input type="checkbox" id="suggested-feedback-checkbox" class="bhashini-skip-translation">
+
+      <label for="suggested-feedback-checkbox">Do you like to give feedback</label>
+       
+
+     
+    <!-- <div style="margin-top: 1rem;">
+      <span class="feedback-disclaimer">
+       <strong style=" margin-right: 0.25rem;">Disclaimer:</strong>Please report any issues related to BHASHINI translated content only.
+      </span>
+     </div> -->
+
+
+       <textarea style="display: none;" class="feedback-suggested-feedback bhashini-skip-translation" placeholder="Suggested Feedback"></textarea>
+        </div>
+      <button class="submit-feedback">Submit</button>
+      </div>
+  </div>
+</div></body><!-- Only for public, reset state code if not available. Redirecting to state selection if completely not available. --></html>

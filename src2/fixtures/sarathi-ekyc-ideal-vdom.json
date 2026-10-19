@@ -1,0 +1,234 @@
+{
+  "artifact": "ideal-layer-1-vdom",
+  "purpose": "Acceptance reference for the captured document's initial visible state; this is an expected semantic model, not generated runtime output.",
+  "source": {
+    "fixture": "sarathi-ekyc-page.html",
+    "pageTitle": "eKYC Form",
+    "url": "https://sarathi.parivahan.gov.in/sarathiservice/newLL_execute.do",
+    "state": "initial page before selecting an authentication method"
+  },
+  "principles": {
+    "values": "Never include typed or prefilled field values.",
+    "state": "Represent only observable control state; do not infer user consent or choose an authentication method.",
+    "hiddenContent": "Do not present hidden alternate-flow or result-panel controls as currently available.",
+    "uncertainty": "Distinguish explicit page semantics from inferred context and report unsupported DOM boundaries."
+  },
+  "tree": {
+    "type": "page",
+    "title": "eKYC Form",
+    "task": {
+      "text": "Learner's Licence application authentication",
+      "source": "visible page heading and instructions",
+      "confidence": "high"
+    },
+    "children": [
+      {
+        "type": "section",
+        "title": "Authentication With E-KYC",
+        "children": [
+          {
+            "type": "context",
+            "title": "Application instructions",
+            "items": [
+              "Applicants can take the LL Test from their home or any preferred location, no need to visit RTO.",
+              "Password for Online LL Test will be sent as SMS to the registered mobile number linked with Aadhaar.",
+              "Successful applicant can download his/her Learner License."
+            ]
+          },
+          {
+            "type": "form",
+            "title": "Authentication",
+            "children": [
+              {
+                "type": "group",
+                "title": "Authentication method",
+                "role": "radiogroup",
+                "children": [
+                  {
+                    "type": "field",
+                    "kind": "radio",
+                    "label": "Submit via Aadhaar Authentication",
+                    "labelSource": "visible adjacent label",
+                    "labelConfidence": "high",
+                    "required": false,
+                    "disabled": false,
+                    "checked": false
+                  },
+                  {
+                    "type": "field",
+                    "kind": "radio",
+                    "label": "Submit Using Sarathi Mobile Authentication",
+                    "labelSource": "visible adjacent label",
+                    "labelConfidence": "high",
+                    "required": false,
+                    "disabled": false,
+                    "checked": false
+                  }
+                ]
+              },
+              {
+                "type": "field",
+                "kind": "text",
+                "label": "State",
+                "labelSource": "visible associated text",
+                "labelConfidence": "high",
+                "required": true,
+                "disabled": true,
+                "readonly": false,
+                "value": "not included"
+              },
+              {
+                "type": "group",
+                "title": "Authentication identifier type",
+                "titleSource": "inferred from the following identifier field label",
+                "titleConfidence": "medium",
+                "role": "radiogroup",
+                "children": [
+                  {
+                    "type": "field",
+                    "kind": "radio",
+                    "label": "Aadhaar number",
+                    "labelSource": "visible adjacent label",
+                    "labelConfidence": "high",
+                    "required": false,
+                    "disabled": false,
+                    "checked": false
+                  },
+                  {
+                    "type": "field",
+                    "kind": "radio",
+                    "label": "Virtual ID",
+                    "labelSource": "visible adjacent label",
+                    "labelConfidence": "high",
+                    "required": false,
+                    "disabled": false,
+                    "checked": false
+                  }
+                ]
+              },
+              {
+                "type": "field",
+                "kind": "password",
+                "label": "Aadhaar Number or Virtual ID",
+                "labelSource": "visible associated text",
+                "labelConfidence": "high",
+                "required": true,
+                "disabled": true,
+                "readonly": false,
+                "empty": true,
+                "value": "never serialized"
+              },
+              {
+                "type": "action",
+                "label": "Generate OTP",
+                "disabled": true
+              },
+              {
+                "type": "field",
+                "kind": "text",
+                "label": "Enter OTP Here",
+                "labelSource": "visible associated text",
+                "labelConfidence": "high",
+                "required": false,
+                "disabled": true,
+                "readonly": false,
+                "empty": true,
+                "value": "never serialized"
+              },
+              {
+                "type": "notice",
+                "text": "Aadhaar holder should have registered mobile number updated against their Aadhaar"
+              },
+              {
+                "type": "group",
+                "title": "Aadhaar consent",
+                "children": [
+                  {
+                    "type": "field",
+                    "kind": "checkbox",
+                    "label": "I hereby state that I have no objection in authenticating myself with Aadhaar based authentication system and give my consent to providing my Aadhaar number, Biometric and/ or One Time Pin (OTP) data for Aadhaar based authentication/ eKYC for the purpose of availing of the Driving Licence related Service provided by the concerned Transport Department myself with Aadhaar Based Authentication System..",
+                    "labelSource": "visible associated consent text",
+                    "labelConfidence": "high",
+                    "required": false,
+                    "disabled": false,
+                    "checked": false
+                  },
+                  {
+                    "type": "field",
+                    "kind": "checkbox",
+                    "label": "I understand that the Biometrics and OTP I provide for authentication shall be used only for authenticating my identity through the Aadhaar Authentication Service or for obtaining my eKYC data through Aadhaar eKYC Service for that specific transaction and for no other purposes.",
+                    "labelSource": "visible associated consent text",
+                    "labelConfidence": "high",
+                    "required": false,
+                    "disabled": false,
+                    "checked": false
+                  },
+                  {
+                    "type": "field",
+                    "kind": "checkbox",
+                    "label": "I understand that the Transport Department shall ensure security and confidentiality of my personal identity data provided for the purpose of Aadhaar based authentication eKYC.",
+                    "labelSource": "visible associated consent text",
+                    "labelConfidence": "high",
+                    "required": false,
+                    "disabled": false,
+                    "checked": false
+                  }
+                ]
+              },
+              {
+                "type": "action",
+                "label": "Authenticate",
+                "disabled": true
+              },
+              {
+                "type": "action",
+                "label": "Cancel & use alternate method for authentication",
+                "disabled": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "page-utility",
+        "title": "Language",
+        "children": [
+          {
+            "type": "field",
+            "kind": "combobox",
+            "label": "Language Translator",
+            "disabled": false
+          }
+        ]
+      }
+    ]
+  },
+  "excludedFromActiveTree": [
+    {
+      "reason": "hidden in the captured initial state",
+      "examples": [
+        "Submit and Home controls shown after choosing the non-Aadhaar path",
+        "applicant and address details shown after authentication",
+        "mobile number, CAPTCHA, and mobile OTP flow"
+      ],
+      "rule": "Include these only in a later snapshot if they become visible."
+    },
+    {
+      "reason": "page chrome not needed to understand the authentication form",
+      "examples": [
+        "site navigation and footer links",
+        "font-size controls"
+      ]
+    }
+  ],
+  "coverage": {
+    "status": "incomplete",
+    "unsupported": [
+      {
+        "kind": "iframe",
+        "count": 1
+      }
+    ],
+    "note": "Controls inside unsupported regions must not be silently represented as inspected."
+  }
+}

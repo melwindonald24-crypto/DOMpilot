@@ -1,0 +1,1183 @@
+{
+  "page": {
+    "host": "pmegp.msme.gov.in",
+    "path": "/Home/HomePage",
+    "title": "PMEGP Home"
+  },
+  "groups": [
+    {
+      "id": "page",
+      "title": "",
+      "fieldCount": 46,
+      "isDefault": true
+    }
+  ],
+  "tree": [
+    {
+      "type": "group",
+      "title": "",
+      "children": [
+        {
+          "type": "field",
+          "ref": "f1-1",
+          "kind": "text",
+          "label": "Aadhaar Number / आधार नंबर : 12 digit Aadhaar number of the applicant should be filled in. / आधार नंबर: आवेदन को 12 अंकों का आधार नंबर भरना चाहिए",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 12
+          }
+        },
+        {
+          "type": "button",
+          "text": "Validate Aadhaar"
+        },
+        {
+          "type": "field",
+          "ref": "f1-2",
+          "kind": "text",
+          "label": "PAN NO / पैन नंबर (Permanent Account Number) : Enter your PAN as printed on your card / पैन नंबर (स्थायी खाता संख्या) : अपने PAN कार्ड पर मुद्रित पैन नंबर दर्ज करें.",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 10
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-3",
+          "kind": "select",
+          "label": "Salutation",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Salutation--",
+            "Shri",
+            "Smt.",
+            "Kum."
+          ],
+          "selectedOptions": [
+            "--Select Salutation--"
+          ],
+          "optionCount": 4
+        },
+        {
+          "type": "field",
+          "ref": "f1-4",
+          "kind": "text",
+          "label": "Name of Applicant / आवेदक का नाम",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-5",
+          "kind": "text",
+          "label": "Date of Birth / जन्म तिथि (dd-mm-yyyy)",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-6",
+          "kind": "text",
+          "label": "Age / आयु",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "required": false,
+          "disabled": true,
+          "readonly": true,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-7",
+          "kind": "select",
+          "label": "Gender / लिंग",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Gender--",
+            "Male",
+            "Female",
+            "Transgender"
+          ],
+          "selectedOptions": [
+            "--Select Gender--"
+          ],
+          "optionCount": 4
+        },
+        {
+          "type": "field",
+          "ref": "f1-8",
+          "kind": "select",
+          "label": "Social Category / सामाजिक श्रेणी",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Social Category--",
+            "General",
+            "Other Backward Caste",
+            "Scheduled Caste",
+            "Scheduled Tribe",
+            "Minority"
+          ],
+          "selectedOptions": [
+            "--Select Social Category--"
+          ],
+          "optionCount": 6
+        },
+        {
+          "type": "field",
+          "ref": "f1-9",
+          "kind": "select",
+          "label": "Special Category (if any) / विशेष श्रेणी (यदि कोई हो)",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Special Category--",
+            "Not Applicable",
+            "Ex-Serviceman",
+            "Physically Challanged",
+            "Hill Border Region",
+            "North East Region"
+          ],
+          "selectedOptions": [
+            "--Select Special Category--"
+          ],
+          "optionCount": 6
+        },
+        {
+          "type": "field",
+          "ref": "f1-10",
+          "kind": "select",
+          "label": "Qualification / शैक्षणिक योग्यता",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Qualification--",
+            "Under 8th Pass",
+            "8th Pass",
+            "SSC",
+            "HSC",
+            "Diploma",
+            "Graduate",
+            "Post Graduate",
+            "PHD"
+          ],
+          "selectedOptions": [
+            "--Select Qualification--"
+          ],
+          "optionCount": 9
+        },
+        {
+          "type": "field",
+          "ref": "f1-11",
+          "kind": "text",
+          "label": "Address for Communication / पत्राचार हेतु पता: The Applicant should fill the complete postal address of the applicant including State, District, Pin Code, Mobile No., Email and PAN No / आवेदक को राज्य, जिला, पिन कोड, मोबाइल नंबर, ईमेल और पैन नंबर सहित आवेदक का पूरा डाक पता भरना चाहिए।",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 200
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-12",
+          "kind": "select",
+          "label": "State / राज्य",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select State--",
+            "ANDAMAN & NICOBAR ISLANDS",
+            "ANDHRA PRADESH",
+            "ARUNACHAL PRADESH",
+            "ASSAM",
+            "BIHAR",
+            "CHANDIGARH",
+            "CHHATTISGARH",
+            "DADRA & NAGAR HAVELI",
+            "DAMAN AND DIU",
+            "DELHI",
+            "GOA",
+            "GUJARAT",
+            "HARYANA",
+            "HIMACHAL PRADESH",
+            "JAMMU AND KASHMIR",
+            "JHARKHAND",
+            "KARNATAKA",
+            "KERALA",
+            "LADAKH",
+            "LADAKH",
+            "LAKSHADWEEP",
+            "MADHYA PRADESH",
+            "MAHARASHTRA",
+            "MANIPUR",
+            "MEGHALAYA",
+            "MIZORAM",
+            "NAGALAND",
+            "ODISHA",
+            "PUDUCHERRY",
+            "PUNJAB",
+            "RAJASTHAN",
+            "SIKKIM",
+            "TAMIL NADU",
+            "TELANGANA",
+            "TRIPURA",
+            "UTTAR PRADESH",
+            "UTTARAKHAND",
+            "WEST BENGAL"
+          ],
+          "selectedOptions": [
+            "--Select State--"
+          ],
+          "optionCount": 39
+        },
+        {
+          "type": "field",
+          "ref": "f1-13",
+          "kind": "text",
+          "label": "District / जिला",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 20
+          }
+        },
+        {
+          "type": "button",
+          "text": "Change District"
+        },
+        {
+          "type": "field",
+          "ref": "f1-14",
+          "kind": "text",
+          "label": "Taluka / Block / तालुका / ब्लॉक : Enter the name of Taluka / Block / तालुका / ब्लॉक : तालुका / ब्लॉक का नाम दर्ज करें.",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 20
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-15",
+          "kind": "text",
+          "label": "Pin / पिन कोड : Enter 6-digit postal PIN code / पिन कोड : 6 अंकों का डाक पिन कोड दर्ज करें.",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 6
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-16",
+          "kind": "text",
+          "label": "Primary Mobile No / मोबाइल नंबर : Enter your 10-digit primary mobile number / मोबाइल नंबर : अपना 10 अंकों का मुख्य मोबाइल नंबर दर्ज करें.",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 10
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-17",
+          "kind": "text",
+          "label": "Secondary Mobile No / मोबाइल नंबर : Enter your secondary 10-digit mobile number / मोबाइल नंबर : अपना दूसरा 10 अंकों का मोबाइल नंबर दर्ज करें (वैकल्पिक).",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 10
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-18",
+          "kind": "email",
+          "label": "eMail / ई-मेल : Enter your valid email address / ई-मेल : अपना वैध ई-मेल पता दर्ज करें (वैकल्पिक).",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 50
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-19",
+          "kind": "checkbox",
+          "label": "Unit Location / इकाई का स्थान same as Communication Address",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "checked": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-20",
+          "kind": "select",
+          "label": "State / राज्य",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select State--",
+            "ANDAMAN & NICOBAR ISLANDS",
+            "ANDHRA PRADESH",
+            "ARUNACHAL PRADESH",
+            "ASSAM",
+            "BIHAR",
+            "CHANDIGARH",
+            "CHHATTISGARH",
+            "DADRA & NAGAR HAVELI",
+            "DAMAN AND DIU",
+            "DELHI",
+            "GOA",
+            "GUJARAT",
+            "HARYANA",
+            "HIMACHAL PRADESH",
+            "JAMMU AND KASHMIR",
+            "JHARKHAND",
+            "KARNATAKA",
+            "KERALA",
+            "LADAKH",
+            "LADAKH",
+            "LAKSHADWEEP",
+            "MADHYA PRADESH",
+            "MAHARASHTRA",
+            "MANIPUR",
+            "MEGHALAYA",
+            "MIZORAM",
+            "NAGALAND",
+            "ODISHA",
+            "PUDUCHERRY",
+            "PUNJAB",
+            "RAJASTHAN",
+            "SIKKIM",
+            "TAMIL NADU",
+            "TELANGANA",
+            "TRIPURA",
+            "UTTAR PRADESH",
+            "UTTARAKHAND",
+            "WEST BENGAL"
+          ],
+          "selectedOptions": [
+            "--Select State--"
+          ],
+          "optionCount": 39
+        },
+        {
+          "type": "field",
+          "ref": "f1-21",
+          "kind": "select",
+          "label": "District / जिला",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select District--"
+          ],
+          "selectedOptions": [
+            "--Select District--"
+          ],
+          "optionCount": 1
+        },
+        {
+          "type": "field",
+          "ref": "f1-22",
+          "kind": "select",
+          "label": "Sub District / Municipal Body / उप जिला / नगर निकाय",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Sub District--"
+          ],
+          "selectedOptions": [
+            "--Select Sub District--"
+          ],
+          "optionCount": 1
+        },
+        {
+          "type": "field",
+          "ref": "f1-23",
+          "kind": "select",
+          "label": "Village / Muncipality Name / गाँव / नगरपालिका का नाम",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Village--"
+          ],
+          "selectedOptions": [
+            "--Select Village--"
+          ],
+          "optionCount": 1
+        },
+        {
+          "type": "field",
+          "ref": "f1-24",
+          "kind": "text",
+          "label": "LGD Code / एलजीडी कोड",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 10
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-25",
+          "kind": "text",
+          "label": "Pin / पिन कोड : Enter the 6-digit postal PIN code / पिन कोड : 6 अंकों का डाक पिन कोड दर्ज करें.",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 6
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-26",
+          "kind": "select",
+          "label": "Unit Location / इकाई का स्थान",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Unit Location--",
+            "Rural",
+            "Urban"
+          ],
+          "selectedOptions": [
+            "--Select Unit Location--"
+          ],
+          "optionCount": 3
+        },
+        {
+          "type": "field",
+          "ref": "f1-27",
+          "kind": "text",
+          "label": "Unit Address / पत्राचार हेतु पता : Enter the official unit address / पत्राचार हेतु सही पता दर्ज करें",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 200
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-28",
+          "kind": "select",
+          "label": "Implementing Agency / कार्यान्वयन एजेंसी",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Implementing Agency--",
+            "KVIC ( Khadi and Village Industries Commission )",
+            "DIC ( District Industries Centre )",
+            "KVIB ( Khadi and Village Industries Board )",
+            "COIR ( Coir Board )"
+          ],
+          "selectedOptions": [
+            "--Select Implementing Agency--"
+          ],
+          "optionCount": 5
+        },
+        {
+          "type": "field",
+          "ref": "f1-29",
+          "kind": "select",
+          "label": "Type of Activity / गतिविधि का प्रकार",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Activity Type--",
+            "Manufacturing",
+            "Service"
+          ],
+          "selectedOptions": [
+            "--Select Activity Type--"
+          ],
+          "optionCount": 3
+        },
+        {
+          "type": "button",
+          "text": "Select Industry/Activity"
+        },
+        {
+          "type": "button",
+          "text": "NIC Code List"
+        },
+        {
+          "type": "context",
+          "text": "Note : Please Select NIC Codes from Select Industry / Activity Button"
+        },
+        {
+          "type": "context",
+          "text": "Note : Kindly select atleast one Industry/Activity."
+        },
+        {
+          "type": "field",
+          "ref": "f1-30",
+          "kind": "select",
+          "label": "Have you completed EDP training ?/क्या ईडीपी प्रशिक्षण लिया है",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select--",
+            "Yes",
+            "No"
+          ],
+          "selectedOptions": [
+            "--Select--"
+          ],
+          "optionCount": 3
+        },
+        {
+          "type": "field",
+          "ref": "f1-31",
+          "kind": "text",
+          "label": "(i) Capital Expenditure : Enter CE loan as proposed in the DPR in rupees / पूंजीगत व्यय : डीपीआर में प्रस्तावित अनुसार पूंजीगत ऋण रुपये में दर्ज करें |",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 12
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-32",
+          "kind": "text",
+          "label": "(ii) Working Capital : Enter WC loan as proposed in the DPR in rupees / कार्यशील पूंजी ऋण : डीपीआर में प्रस्तावित अनुसार कार्यशील पूंजी ऋण को रुपये में दर्ज करें.",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 12
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-33",
+          "kind": "text",
+          "label": "(iii) Total Loan : The total loan will be calculated by the system automatically / कुल ऋण : की गणना प्रणाली द्वारा स्वचालित रूप से की जाएगी |",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": true,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-34",
+          "kind": "text",
+          "label": "No. Of Employees / रोजगारो की संख्या",
+          "labelSource": "aria-label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "autocomplete": "off",
+          "empty": true,
+          "coverage": "unverified",
+          "hints": {
+            "maxLength": 6
+          }
+        },
+        {
+          "type": "field",
+          "ref": "f1-35",
+          "kind": "select",
+          "label": "Bank Name / बैंक का नाम",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Bank Name--",
+            "Abhyudaya Cooperative Bank Ltd",
+            "Abu Dhabi Commercial Bank",
+            "Adarsh Co-Operative Bank Ltd.",
+            "Adilabad Dcc Bank Ltd.",
+            "Aditya Birla Idea Payments Bank",
+            "Ahilyadevi Urban Co - Operative Bank Ltd",
+            "Ahmedabad Mercantile Cooperative Bank Ltd",
+            "Ahmedabd District Co Op Bank Ltd",
+            "Ahmednagar Merchants Co-Op Bank Ltd",
+            "Airtel Payments Bank Ltd",
+            "Ajara Urban Co Op Bank Ltd Ajara",
+            "Ajmer Central Co-Operative Bank Ltd",
+            "Akhand Anand Co Op Bank Ltd",
+            "Akola District Central Cooperative Bank",
+            "Akola Janata Commercial Cooperative Bank",
+            "Akola Urban Coop Bank",
+            "Almora Urban Cooperative Bank Ltd",
+            "Almora Zila Sahkari Bank",
+            "Alwar Central Co-Operative Bank Ltd.",
+            "Ambajogai Peoples Co-Op Bank Ltd",
+            "Ambala Central Cooperative Bank Ltd",
+            "Ambarnath Jaihind Coop Bank Ltd Ambarnath",
+            "Amreli Jilla Madhyastha Sahakari Bank Ltd",
+            "Andaman State Coop Bank Ltd",
+            "Andhra Pradesh Grameen Vikas Bank",
+            "Andhra Pradesh Grameena Bank",
+            "Andhra Pradesh Grameena Vikas Bank",
+            "Andhra Pradesh Grameena Vikas Bank",
+            "Andhra Pradesh State Cooperative Bank Ltd",
+            "Andhra Pragathi Grameena Bank",
+            "Ap Mahesh Cooperative Urban Bank Ltd",
+            "Apna Sahakari Bank Ltd",
+            "Appasaheb Birnale Sahakari Bank Ltd",
+            "Arunachal Pradesh Rural Bank",
+            "Arvind Sahakari Bank Ltd",
+            "Arvind Sahkari Bank Ltd",
+            "Assam Coop Apex Bank Ltd",
+            "Assam Gramin Bank",
+            "Assam Gramin Vikash Bank",
+            "Associate Co Op Bank Ltd",
+            "Associate Coop Bank",
+            "Australia And New Zealand Banking Group Limited",
+            "Axis Bank Ltd",
+            "Babasaheb Deshmukh Sahakari Bank Ltd",
+            "Bagalkot Cooperative Bank",
+            "Bagalkot District Central Coop Bank",
+            "Balageria Central Coop Bank Ltd",
+            "Balasore Bhadrak Ccb",
+            "Ballia Etawah Gramin Bank"
+          ],
+          "selectedOptions": [
+            "--Select Bank Name--"
+          ],
+          "optionCount": 727
+        },
+        {
+          "type": "field",
+          "ref": "f1-36",
+          "kind": "text",
+          "label": "IFSC / Bank Code",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "button",
+          "text": "Select Bank IFSC Code and Address"
+        },
+        {
+          "type": "field",
+          "ref": "f1-37",
+          "kind": "text",
+          "label": "Branch Name / शाखा का नाम",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-38",
+          "kind": "text",
+          "label": "Address / पता",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-39",
+          "kind": "text",
+          "label": "District / जिला",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "requiredHint": {
+            "value": true,
+            "source": "visible-marker"
+          },
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-40",
+          "kind": "select",
+          "label": "Bank Name / बैंक का नाम",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Bank Name--",
+            "Abhyudaya Cooperative Bank Ltd",
+            "Abu Dhabi Commercial Bank",
+            "Adarsh Co-Operative Bank Ltd.",
+            "Adilabad Dcc Bank Ltd.",
+            "Aditya Birla Idea Payments Bank",
+            "Ahilyadevi Urban Co - Operative Bank Ltd",
+            "Ahmedabad Mercantile Cooperative Bank Ltd",
+            "Ahmedabd District Co Op Bank Ltd",
+            "Ahmednagar Merchants Co-Op Bank Ltd",
+            "Airtel Payments Bank Ltd",
+            "Ajara Urban Co Op Bank Ltd Ajara",
+            "Ajmer Central Co-Operative Bank Ltd",
+            "Akhand Anand Co Op Bank Ltd",
+            "Akola District Central Cooperative Bank",
+            "Akola Janata Commercial Cooperative Bank",
+            "Akola Urban Coop Bank",
+            "Almora Urban Cooperative Bank Ltd",
+            "Almora Zila Sahkari Bank",
+            "Alwar Central Co-Operative Bank Ltd.",
+            "Ambajogai Peoples Co-Op Bank Ltd",
+            "Ambala Central Cooperative Bank Ltd",
+            "Ambarnath Jaihind Coop Bank Ltd Ambarnath",
+            "Amreli Jilla Madhyastha Sahakari Bank Ltd",
+            "Andaman State Coop Bank Ltd",
+            "Andhra Pradesh Grameen Vikas Bank",
+            "Andhra Pradesh Grameena Bank",
+            "Andhra Pradesh Grameena Vikas Bank",
+            "Andhra Pradesh Grameena Vikas Bank",
+            "Andhra Pradesh State Cooperative Bank Ltd",
+            "Andhra Pragathi Grameena Bank",
+            "Ap Mahesh Cooperative Urban Bank Ltd",
+            "Apna Sahakari Bank Ltd",
+            "Appasaheb Birnale Sahakari Bank Ltd",
+            "Arunachal Pradesh Rural Bank",
+            "Arvind Sahakari Bank Ltd",
+            "Arvind Sahkari Bank Ltd",
+            "Assam Coop Apex Bank Ltd",
+            "Assam Gramin Bank",
+            "Assam Gramin Vikash Bank",
+            "Associate Co Op Bank Ltd",
+            "Associate Coop Bank",
+            "Australia And New Zealand Banking Group Limited",
+            "Axis Bank Ltd",
+            "Babasaheb Deshmukh Sahakari Bank Ltd",
+            "Bagalkot Cooperative Bank",
+            "Bagalkot District Central Coop Bank",
+            "Balageria Central Coop Bank Ltd",
+            "Balasore Bhadrak Ccb",
+            "Ballia Etawah Gramin Bank"
+          ],
+          "selectedOptions": [
+            "--Select Bank Name--"
+          ],
+          "optionCount": 727
+        },
+        {
+          "type": "field",
+          "ref": "f1-41",
+          "kind": "text",
+          "label": "IFSC / Bank Code",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "button",
+          "text": "2nd Financing Branch IFSC Code / दूसरी फाइनेंसिंग ब्रांच का IFSC कोड"
+        },
+        {
+          "type": "field",
+          "ref": "f1-42",
+          "kind": "text",
+          "label": "Branch Name / शाखा का नाम",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-43",
+          "kind": "text",
+          "label": "Address / पता",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-44",
+          "kind": "text",
+          "label": "District / जिला",
+          "labelSource": "adjacent",
+          "guessed": true,
+          "labelConfidence": "low",
+          "required": false,
+          "disabled": true,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified"
+        },
+        {
+          "type": "field",
+          "ref": "f1-45",
+          "kind": "select",
+          "label": "Want To avail CGTMSE / सीजीटीएमएसई का लाभ उठाना चाहते हैं",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select--",
+            "Yes",
+            "No"
+          ],
+          "selectedOptions": [
+            "--Select--"
+          ],
+          "optionCount": 3
+        },
+        {
+          "type": "field",
+          "ref": "f1-46",
+          "kind": "select",
+          "label": "Where did you hear about PMEGP / आपने पीएमईजीपी के बारे में कहां सुना",
+          "labelSource": "label",
+          "guessed": false,
+          "labelConfidence": "high",
+          "required": false,
+          "disabled": false,
+          "readonly": false,
+          "empty": true,
+          "coverage": "unverified",
+          "options": [
+            "--Select Information Source--",
+            "Awareness Camp",
+            "Implementing Agencies(KVIC/KVIB/DIC)",
+            "Newspaper advertisements",
+            "Radio advertisements",
+            "Television advertisement",
+            "Internet advertisement",
+            "Social Media (Twitter,facebook,etc)",
+            "Search Engine",
+            "Friends, Family & Acquaintances",
+            "Other"
+          ],
+          "selectedOptions": [
+            "--Select Information Source--"
+          ],
+          "optionCount": 11
+        },
+        {
+          "type": "context",
+          "text": "I, hereby voluntarily and explicitly consent to the sharing of my Aadhaar and PAN details with KVIC & MoMSME. I understand that these details will be used solely for PMEGP Loan Purpose, and I confirm that all information shared is accurate to the best of my knowledge. I acknowledge that I have been informed about the purpose of sharing these details and agree to the same, also In case of change in unit location, I will communicate the same to the Implementing Agency and Bank."
+        },
+        {
+          "type": "context",
+          "text": "I hereby declare that I have not already availed or registered for other Govt. subsidy Schemes, and if found so I will be ready for further legal actions against myself."
+        },
+        {
+          "type": "context",
+          "text": "I understand that submission of my application under PMEGP does not guarantee entitlement to Margin Money (MM) Subsidy. The sanction and release of MM Subsidy shall be subject to the availability of funds allocated for the specific financial year and applicable guidelines. Any application found to contain false, incorrect, or misleading information shall be liable for rejection. Applicants are solely responsible for the accuracy and authenticity of the information submitted."
+        },
+        {
+          "type": "button",
+          "text": "🔊"
+        },
+        {
+          "type": "button",
+          "text": "⛔"
+        }
+      ]
+    }
+  ],
+  "skipped": {
+    "hidden": 8
+  },
+  "needsCrop": [],
+  "viewport": {
+    "w": 879,
+    "h": 676,
+    "dpr": 1.25
+  },
+  "completeness": {
+    "complete": true,
+    "unsupported": []
+  },
+  "capture": {
+    "scope": "Selected Application For New Unit tab panel (#application-form), not other portal tabs",
+    "source": "Live page DOM; hidden/display state sampled in browser",
+    "privacy": "Input values, textarea contents, selected options, and checkbox/radio states were cleared on a clone before snapshotting",
+    "geometry": "Spatial hit-testing was not performed; field coverage is marked unverified"
+  }
+}
